@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>登录页模板</title>
+	<link rel="stylesheet" href="../../Public/css/reset.css">
+	<link rel="stylesheet" href="../../Public/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+	<div class="logo_box">
+		<h3>侨品汇欢迎你</h3>
+		<form action="" method="post">
+			<div class="input_outer">
+				<span class="u_user"></span>
+				<input type="text" name="logname" class="text name" placeholder="请输入手机号" required>
+			</div>
+			<div class="input_outer">
+				<span class="us_uer"></span>
+				<input type="password" name="logpass" class="text pwd" value="" placeholder="请输入密码" required>
+			</div>
+			<div class="input_outer display">
+				<span class="u_user"></span>
+				<input name="logname check" class="text" placeholder="请输入验证码" value="" type="text" required>
+				<span style="float: right;margin-top: -32px;" onload="start()">获取验证码</span>
+			</div>
+			<div class="mb2"><input class="act-but submit" type="submit" value="登录"></div>
+			<input name="savesid" value="0" id="check-box" class="checkbox" type="checkbox"><span>记住用户名</span>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="../../Public/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../../Public/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../Public/js/bootbox.min.js"></script>
+	<script type="text/javascript" src="login.js"></script> 
+</body>
+
+</html>
