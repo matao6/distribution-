@@ -73,6 +73,8 @@ $("input:submit").on("click", function () {
                 } else {
                     bootbox.alert(data.message);
                     $(".display").show();
+                    // $(".request").countDown();
+                    countDown();
                     secondC = true;
                     stopForm = false;
                 }
@@ -82,27 +84,59 @@ $("input:submit").on("click", function () {
     return stopForm;
 })
 
+// $.fn.extend({
+//     countDown: function () {
+//         if ($(this).setTime) {
+//             if (time == 0) {
+//                 $(this).text("获取验证码");
+//                 clearInterval(set);
+//             } else {
+//                 $(this).text(time + 's');
+//                 time--;
+//                 var set = setTimeout(function () {
+//                     $(this).countDown();
+//                 }, 1000);
+//             }
+//         } else {
+//             $(this).setTime = 60;
+//         }
+//     }
+// });
 
+var time = 60;
+function countDown() {
+    if (time == 0) {
+        $(".request").text("获取验证码");
+        time = 60;
+        clearInterval(set);
+    } else {
+        $(".request").text(time+'s');
+        time--;
+        var set = setTimeout(function(){
+            countDown()
+        }, 1000);
+    }
+}
 
-    /* $.ajax({  
-            url : 'http://fenxiao.qphvip.com/admin.php/Home/Index/PostLogin',  
-            data : {  
-                P:name,
-                M:pwd
-            },  
-            dataType : 'json',  
-            success : function(data) {  
-                console.log(data);
-                if (data.code == "0") {  
-                    alert("账号或密码错误");  
-                } else if (data.code=="1") {
-                    alert("登录成功");
-                }else if (data.code=="2") {
-                    alert("该账号已禁用，请联系总管理员");
-                }else if (data.code=="3") {
-                    alert("检测到您登录地址与上次登录地址不同，请进行身份核实验证");
+/* $.ajax({  
+        url : 'http://fenxiao.qphvip.com/admin.php/Home/Index/PostLogin',  
+        data : {  
+            P:name,
+            M:pwd
+        },  
+        dataType : 'json',  
+        success : function(data) {  
+            console.log(data);
+            if (data.code == "0") {  
+                alert("账号或密码错误");  
+            } else if (data.code=="1") {
+                alert("登录成功");
+            }else if (data.code=="2") {
+                alert("该账号已禁用，请联系总管理员");
+            }else if (data.code=="3") {
+                alert("检测到您登录地址与上次登录地址不同，请进行身份核实验证");
 
-                }
+            }
 
-            } 
-    });  */
+        } 
+});  */

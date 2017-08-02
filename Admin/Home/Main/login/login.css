@@ -23,7 +23,13 @@ input::-webkit-input-placeholder {
 }
 /* mt-新增 */
 .display{
-     display: none; 
+      /* display: none;   */
+}
+.request{
+    float: right;
+    margin-top: 13px;
+    margin-right: 8px;
+    cursor: pointer;
 }
 
 /* 基础样式 */
@@ -120,7 +126,7 @@ label {
 }
 
 .text {
-    width: 220px;
+    width: 130px;
     height: 46px;
     outline: none;
     display: inline-block;
