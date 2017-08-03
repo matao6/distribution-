@@ -23,14 +23,19 @@ input::-webkit-input-placeholder {
 }
 /* mt-新增 */
 .display{
-      /* display: none;   */
+       display: none;   
 }
 .request{
     float: right;
-    margin-top: 13px;
+    margin-top: 12px;
     margin-right: 8px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
+ #check{
+    width: 120px;
+} 
 
 /* 基础样式 */
 
@@ -126,7 +131,7 @@ label {
 }
 
 .text {
-    width: 130px;
+    width: 220px;
     height: 46px;
     outline: none;
     display: inline-block;
