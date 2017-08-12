@@ -1,0 +1,18 @@
+{
+    "_readMe": "Review list of sync operations, then use Ftp-sync: Commit command to accept changes",
+    "_warning": "This file should not be saved, reopened review file won't work!",
+    "filesToUpdate": [],
+    "filesToAdd": [],
+    "dirsToAdd": [],
+    "filesToRemove": [
+        "publicPlugins/image/1494318631621.jpg",
+        "publicPlugins/image/login_ico.png"
+    ],
+    "dirsToRemove": [
+        "publicPlugins",
+        "publicPlugins/bootstrap",
+        "publicPlugins/css",
+        "publicPlugins/image",
+        "publicPlugins/js"
+    ]
+}

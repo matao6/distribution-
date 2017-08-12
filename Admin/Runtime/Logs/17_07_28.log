@@ -1,0 +1,24 @@
+[ 2017-07-28T13:51:24+08:00 ] 223.71.245.118 /admin.php/Home/Index/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000507s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-07-28T13:51:36+08:00 ] 223.71.245.118 /admin.php/Index/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000510s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+

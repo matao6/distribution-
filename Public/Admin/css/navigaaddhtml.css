@@ -1,0 +1,41 @@
+input[type="radio"] {
+    vertical-align: top;
+    margin: 3px;
+}
+.naviPadding{
+    padding-top: 3px
+}
+.tit{
+    padding-top: 5px;
+    color: #666;
+}
+.red {
+  color: #f00;
+  margin-right: 8px;
+}
+.input:read-only {
+  background-color: #e7e8eb
+}
+.info .title {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.info .form-wrapper {
+  background: #f8f8f8;
+}
+.info .form-wrapper .m_formPart {
+  line-height: 20px;
+  padding: 0 0 8px;
+}
+.info .form-wrapper .m_formPart .m_label {
+  float: left;
+  width: 110px;
+  text-align: right;
+  color: #333;
+  line-height: 28px;
+  font-weight: 700;
+}
+.info .form-wrapper .m_formPart .form-controls .error {
+  color: #f00;
+}

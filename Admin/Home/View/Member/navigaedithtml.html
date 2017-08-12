@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑导航</title>
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/memberAddHtml.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap-switch.min.css">    
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/navigaaddhtml.css">
+</head>
+<body class="body-wrapper">
+    <div class="header clearfix">
+        <div class="h-left">
+            <div class="logo">
+                <a href="#">
+                    <img src="__PUBLIC__/Admin/image/logo.png" alt="侨品汇">
+                </a>
+            </div>
+            <div class="text">
+                <div class="title">侨品汇</div>
+                <div class="des">海外购物平台</div>
+            </div>
+        </div>
+        <div class="h-right clearfix">
+            <ul class="nav-wrapper nav-wrapper-hook clearfix">
+                 <!-- <li class="right-nav right-nav-hook">
+                    <a href="#">test</a>
+                </li>    -->
+            </ul>
+            <div class="user-wrapper">
+                <span class="name">test</span>
+                <div class="message">
+                    <a href="###" class="glyphicon glyphicon-envelope"></a>
+                </div>
+                <div class="account account-hook">
+                    <a href="javascript:;" class="btn btn-primary user">
+                        <i class="glyphicon glyphicon-user icon_right"></i>账户
+                    </a>
+                    <ul class="user-part user-part-hook hide">
+                        <li class="exit">
+                            <a href="">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="slidebar slidebar-hook">
+             <!-- <dl class="bar-wrapper">
+                <dt class="list">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <span>test</span>
+                </dt>
+                <dd class="list-child list-child-hook">
+                    <a href="#">test-child--lalal</a>
+                </dd>
+            </dl>   -->
+        </div>
+        <div class="info">
+            <h1 class="title">编辑导航</h1>
+            <div class="form-wrapper">
+                <form action="" method="POST" id="adminForm" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{$naviga.id}">
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>导航名称：
+                        </label>
+                        <div class="form-controls">
+                            <input type="text" class="input m_name" name="name" value="{$naviga.name}">
+                        </div>
+                    </div>
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>父级：
+                        </label>
+                        <div class="form-controls">
+                            <select class="select" name="fid">
+                                <if condition="$naviga.fid eq 0 ">
+                                    <option value="0">顶级导航</option>
+                                </if>
+                                <foreach name="list" item="v" >
+                                    <if condition="$v.id eq $naviga.fid ">
+                                        <option value="{$v.id}" selected>{$v.name}</option>
+                                        <else />
+                                        <option value="{$v.id}">{$v.name}</option>
+                                    </if>
+                                    <foreach name="v['list']" item="vo" >
+                                        <if condition="$vo.id eq $naviga.fid ">
+                                            <option value="{$vo.id}" selected>--{$vo.name}</option>
+                                            <else />
+                                            <option value="{$vo.id}">--{$vo.name}</option>
+                                        </if>
+                                    </foreach>
+                                </foreach>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>URL：
+                        </label>
+                        <div class="form-controls">
+                            <input type="text" class="input" name="url" value="{$naviga.url}">
+                        </div>
+                    </div>
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>权重：
+                        </label>
+                        <div class="form-controls">
+                            <input type="text" class="input" name="sort" value="{$naviga.sort}">
+                        </div>
+                        <div class="form-controls tit">数字越小排位越靠前</div>
+                    </div>
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>是否导航：
+                        </label>
+                        <div class="form-controls naviPadding">
+                            <if condition="$naviga.type eq 1 ">
+                                <label><input type="radio" class="" name="type" value="1" checked>是</label>
+                                <label><input type="radio" class="" name="type" value="0">否</label>
+                                <else />
+                                <label><input type="radio" class="" name="type" value="1">是</label>
+                                <label><input type="radio" class="" name="type" value="0" checked>否</label>
+                            </if>
+                        </div>
+                    </div>
+                    <div class="m_formPart">
+                        <label class="m_label" for="">
+                            <span class="red">*</span>状态：
+                        </label>
+                        <div class="form-controls" style="padding-top: 4px;">
+                            <if condition="$naviga.state eq 1 ">
+                                <input type="checkbox" name="state" id="state-hook" value="1" checked />
+                                <else />
+                                <input type="checkbox" name="state" id="state-hook" value="1"/>
+                            </if>
+                        </div>
+                    </div>
+                    <div class="form-controls">
+                        <input type="submit" class="btn btn-primary" value="保存">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/messages_zh.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.form.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/bootbox.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/js/common.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/navigaedithtml.js"></script>
+</body>
+</html>

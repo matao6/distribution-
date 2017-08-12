@@ -1,0 +1,10 @@
+[ 2017-07-28T13:50:58+08:00 ] 223.71.245.118 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+
+[ 2017-07-28T13:51:16+08:00 ] 223.71.245.118 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+

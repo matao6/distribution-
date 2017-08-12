@@ -1,0 +1,19 @@
+.info .title {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.info .add {
+  padding-bottom: 20px;
+}
+.info .search {
+  padding-bottom: 20px;
+}
+.info .infomation .btn {
+  margin-right: 5px;
+}
+td {
+    vertical-align: middle;
+}
+.list-active {
+  background: #ccc;
+}

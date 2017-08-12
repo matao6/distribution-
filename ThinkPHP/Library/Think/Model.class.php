@@ -1210,6 +1210,26 @@ class Model {
     }
 
     /**
+     * SQL查询
+     * @access public
+     * @param string $sql  SQL指令
+     * @param mixed $parse  是否需要解析SQL
+     * @return mixed
+     */
+    public function getOne($sql,$parse=false) {
+        if(!is_bool($parse) && !is_array($parse)) {
+            $parse = func_get_args();
+            array_shift($parse);
+        }
+        $sql  =   $this->parseSql($sql,$parse);
+	$info = $this->db->query($sql);
+	if (!empty($info)){
+		$info = $info[0];
+	}
+        return $info;
+    }
+
+    /**
      * 解析SQL语句
      * @access public
      * @param string $sql  SQL指令

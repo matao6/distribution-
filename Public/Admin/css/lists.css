@@ -1,0 +1,36 @@
+td {
+  vertical-align: middle;
+}
+.modal.in .modal-dialog {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.info .title {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.info .nowHasUser {
+  position: relative;
+  padding: 12px 15px;
+  border: 1px solid #1c89d5;
+  border-radius: 5px;
+  background: #d9edf7;
+}
+.info .nowHasUser .amount {
+  font-size: 16px;
+}
+.info .nowHasUser .removeParent {
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.info .form-wrapper .row {
+  height: 40px;
+}
+.info .form-wrapper .row .col #start_date,
+.info .form-wrapper .row .col #end_date {
+  cursor: not-allowed;
+}

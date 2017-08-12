@@ -7,7 +7,7 @@
  * */
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends AdminController {
     /**
      * 后台首页
      * 2017-07-19 Angus

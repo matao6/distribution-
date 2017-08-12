@@ -1,0 +1,19 @@
+.info .content-right-title {
+  font-weight: bold;
+}
+
+.addAddress-hook{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.addAddress-hook .down-hook {
+  position: absolute;
+  right: -25px;
+  top: 8px;
+  padding: 5px;
+}
+
+li.widthAuto{
+  width: 90%;
+}

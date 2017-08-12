@@ -1,0 +1,54 @@
+.table {
+  margin-bottom: 0px;
+}
+.info .content-right-title {
+  font-weight: bold;
+}
+.info .info-wrapper .info-left {
+  width: 49%;
+  float: left;
+}
+.info .info-wrapper .info-left .account {
+  line-height: 32px;
+  padding-left: 18px;
+  border-bottom: 1px solid #ccc;
+}
+.info .info-wrapper .info-left .account .icon {
+  margin-right: 8px;
+}
+.info .info-wrapper .info-left .account .nowAccount {
+  font-weight: bold;
+}
+.info .info-wrapper .info-left .info-content {
+  margin-top: 8px;
+}
+.info .info-wrapper .info-left .info-content .content-child {
+  width: 33%;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+.info .info-wrapper .info-right {
+  width: 49%;
+  float: right;
+}
+.info .info-wrapper .info-right .library {
+  line-height: 32px;
+  padding-left: 18px;
+  border-bottom: 1px solid #ccc;
+}
+.info .info-wrapper .info-right .library .icon {
+  margin-right: 8px;
+}
+.info .info-wrapper .info-right .library .nowLib {
+  font-weight: bold;
+}
+.info .info-wrapper .info-right .info-content {
+  margin-top: 8px;
+}
+.info .info-wrapper .info-right .info-content .content-child {
+  width: 33%;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}

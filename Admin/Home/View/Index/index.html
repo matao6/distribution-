@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/index.css">
+</head>
+
+<body class="body-wrapper">
+    <div class="header clearfix">
+        <div class="h-left">
+            <div class="logo">
+                <a href="#">
+                    <img src="__PUBLIC__/Admin/image/logo.png" alt="侨品汇">
+                </a>
+            </div>
+            <div class="text">
+                <div class="title">侨品汇</div>
+                <div class="des">海外购物平台</div>
+            </div>
+        </div>
+        <div class="h-right clearfix">
+            <ul class="nav-wrapper nav-wrapper-hook clearfix">
+                <!-- <li class="right-nav right-nav-hook">
+                    <a href="#">test</a>
+                </li> -->
+            </ul>
+            <div class="user-wrapper">
+                <span class="name">test</span>
+                <div class="message">
+                    <a href="###" class="glyphicon glyphicon-envelope"></a>
+                </div>
+                <div class="account account-hook">
+                    <a href="javascript:;" class="btn btn-primary user">
+                        <i class="glyphicon glyphicon-user icon_right"></i>账户
+                    </a>
+                    <ul class="user-part user-part-hook hide">
+                        <li class="exit">
+                            <a href="">退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="slidebar slidebar-hook">
+            <!-- <dl class="bar-wrapper">
+                <dt class="list">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <span>test</span>
+                </dt>
+                <dd class="list-child list-child-hook">
+                    <a href="#">test-child--lalal</a>
+                </dd>
+            </dl> -->
+        </div>
+        <div class="info">
+            <h1 class="content-right-title">欢迎您！</h1>
+            <div class="alert alert-warning disable-del">
+                注：首页统计数据30分钟更新一次。
+                <a href="javascript:;" class="alert-delete removeParent glyphicon glyphicon-remove" title="隐藏"></a>
+            </div>
+            <div class="info-wrapper clearfix">
+                <div class="info-left">
+                    <div class="account">
+                        <i class="glyphicon glyphicon-user icon blue"></i>
+                        <span class="nowAccount">当前账号：</span>
+                        <span class="mobile">test</span>
+                    </div>
+                    <div class="info-content">
+                        <div class="content-child">
+                            分销商数：<span class="wordRed">test</span>
+                        </div>
+                        <div class="content-child">
+                            待审核分销商数：<span class="wordRed">test</span>
+                        </div>
+                        <div class="content-child">
+                            申请提现笔数：<span class="wordRed">test</span>笔
+                        </div>
+                        <div class="content-child">
+                            已支出佣金：<span class="wordRed">test</span>元
+                        </div>
+                        <div class="content-child">
+                            佣金余额：<span class="wordRed">test</span>元
+                        </div>
+                        <div class="content-child">
+                            待收益佣金：<span class="wordRed">test</span>元
+                        </div>
+                    </div>
+                </div>
+                <div class="info-right">
+                    <div class="library">
+                        <i class="glyphicon glyphicon-equalizer icon blue"></i>
+                        <span class="nowLib">库存提醒：</span> 有
+                        <span class="wordRed">test</span>件商品已达到警戒库存
+                    </div>
+                    <div class="info-content">
+                        <div class="content-child">
+                            出售中的商品数：<span class="wordRed">test</span>
+                        </div>
+                        <div class="content-child">
+                            仓库中商品数：<span class="wordRed">test</span>
+                        </div>
+                        <div class="content-child">
+                            已售罄的商品数：<span class="wordRed">test</span>
+                        </div>
+                        <div class="content-child">
+                            待付款订单数：<span class="wordRed">test</span>笔
+                        </div>
+                        <div class="content-child">
+                            待发货订单数：<span class="wordRed">test</span>笔
+                        </div>
+                        <div class="content-child">
+                            待退/换货订单数：<span class="wordRed">test</span>笔
+                        </div>
+                    </div>
+                </div>
+                <table class="wxtables data mgt15">
+                    <colgroup>
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td colspan="4" class="left" style="font-size:14px;">数据统计</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tBodyGetTotalCcount">
+                        <tr>
+                            <td>
+                                <div class="dataItems">总计订单（笔）</div>
+                                <div class="dataItems">
+                                    <span class="num1">test</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dataItems">总消费金额（元）</div>
+                                <div class="dataItems">
+                                    <span class="num1">test</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dataItems">本月订单（笔）</div>
+                                <div class="dataItems">
+                                    <span class="num1">test</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dataItems">本月消费金额（元）</div>
+                                <div class="dataItems">
+                                    <span class="num1">test</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="chartWrap mgt15 clearfix">
+                    <div class="chartBox chartBox-bdr per50 fl">
+                        <div class="cb-title">
+                            <h2>上月佣金真实排名</h2>
+                        </div>
+                        <div class="cb-contain" style="padding:0;">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="7%">
+                                    <col width="25%">
+                                    <col width="20%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>昵称/手机号</td>
+                                        <td>收入佣金</td>
+                                        <td>佣金余额</td>
+                                        <td>排名</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txtCenter"></td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="chartBox chartBox-bdr per50 fr">
+                        <div class="cb-title">
+                            <h2>总佣金真实排名</h2>
+                        </div>
+                        <div class="cb-contain" style="padding:0;">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="7%">
+                                    <col width="20%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>昵称/手机号</td>
+                                        <td>收入佣金</td>
+                                        <td>佣金余额</td>
+                                        <td>排名</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txtCenter"></td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="chartWrap mgt15 clearfix">
+                    <div class="chartBox chartBox-bdr per50 fl">
+                        <div class="cb-title">
+                            <h2>会员上月积分真实排名</h2>
+                        </div>
+                        <div class="cb-contain" style="padding:0;" data-type="/Shop/getUserPrevMonthPointTopSort">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="9%">
+                                    <col width="41%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>昵称/手机号</td>
+                                        <td>获得积分</td>
+                                        <td>排名</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txtCenter"></td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="chartBox chartBox-bdr per50 fr">
+                        <div class="cb-title">
+                            <h2>会员当前积分真实排名</h2>
+                        </div>
+                        <div class="cb-contain" style="padding:0;" data-type="/Shop/getUserCurrentPointTopSort">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="9%">
+                                    <col width="41%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>昵称/手机号</td>
+                                        <td>当前积分</td>
+                                        <td>排名</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txtCenter"></td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/messages_zh.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.form.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/common.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/index.js"></script>
+</body>
+
+</html>

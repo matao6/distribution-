@@ -1,0 +1,25 @@
+{
+    "remotePath": "./",
+    "host": "116.62.8.204",
+    "username": "fenxiao",
+    "password": "fenxiao@admin",
+    "port": 5212,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.svn",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [".js", ".html", ".css", ".styl"],
+        "path": ""
+    }
+}
