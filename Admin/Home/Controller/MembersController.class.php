@@ -42,13 +42,16 @@ class MembersController extends AdminController {
 		$phone = I('get.phone','');
 		$starttime = I('get.starttime','');
 		$endtime = I('get.endtime','');
+		$group = I('get.group','');
 		$status = I('get.status','1');
 		$p = I('get.p',1);
+		$group_list = M('Mgroup')->where('status=1')->select();
 		$where = ' 1 ';
 		if (!empty($uid)){ $where .= " AND (`id` = '".$uid."' OR realname ='".$uid."')"; }
 		if (!empty($phone)){ $where .= " AND (`phone` = '".$phone."' OR username = '".$phone."')"; }
 		if (!empty($starttime)){ $where .= ' AND createtime >= '.strtotime($starttime.' 00:00:00'); }
 		if (!empty($endtime)){ $where .= ' AND createtime <= '.strtotime($endtime.' 23:59:59'); }
+		if (!empty($group)){ $where .= ' AND m_group_id = '.$group; }
 		if (!empty($status)){ $where .= ' AND `status` != 3'; }
 		$sql = "SELECT COUNT(*) AS num FROM qph_members WHERE ".$where;
 		$Model = new \Think\Model();
@@ -63,9 +66,9 @@ class MembersController extends AdminController {
 			$this->assign('page',$show);
 		}
 		$this->assign('list',$list);
-
-
 		$this->assign('uid',$uid);
+		$this->assign('group_list',$group_list);
+		$this->assign('group',$group);
 		$this->assign('phone',$phone);
 		$this->assign('starttime',$starttime);
 		$this->assign('endtime',$endtime);
@@ -190,6 +193,39 @@ class MembersController extends AdminController {
 	}
 
 	/**
+	*  修改用户余额
+	* 2017-08-14 Aries
+	* */
+	public function setAccountBalance(){
+		$id = intval(I('post.id',''));
+		if (empty($id)){ die(json_encode(array('status'=>'0','msg'=>'非法参数！')));exit; }
+		$userinfo = M('Members')->where('id='.$id.' AND status!=3')->find();
+		if(empty($userinfo)){ die(json_encode(array('status'=>'0','msg'=>'用户不存在或已删除！')));exit; }
+		$account_balance = I('post.account_balance','');
+		$note = I('post.note','');
+		if (($userinfo['account_balance'] + $account_balance ) < 0){ die(json_encode(array('status'=>'0','msg'=>'用户余额不够！')));exit; }
+		$data['uid'] = $id;
+		$data['type'] = 1;
+		$data['original'] = $userinfo['account_balance'];
+		$data['last'] = $userinfo['account_balance'] + $account_balance;
+		$data['money'] = $account_balance;
+		$data['note'] = $note;
+		$data['createtime'] = time();
+		$data['createuserid'] = $_SESSION['User']['uid'];
+		$trans = new \Think\Model();
+                $trans->startTrans();
+		if (!M('MoneyLog')->add($data)){ die(json_encode(array('status'=>'0','msg'=>'用户余额变更日志添加失败！')));exit; }
+		$datainfo['id'] = $id;
+		$datainfo['account_balance'] = $data['last'];
+		if(!M('Members')->save($datainfo)){
+			$trans->rollback();
+			die(json_encode(array('status'=>'0','msg'=>'更新用户余额失败！')));exit;
+		}
+		$trans->commit();
+		die(json_encode(array('status'=>'1','msg'=>'恭喜您，用户余额调整成功！')));exit;
+	}
+
+	/**
 	*  获取用户信息
 	* 2017-08-09 Aries
 	* */
@@ -229,10 +265,23 @@ class MembersController extends AdminController {
 		die(json_encode(array('status'=>'1','msg'=>'恭喜您，用户设置分组成功！')));exit;
 	}
 
-	public function getIntegral(){
-		$id = I('get.uid','');
-		$p = I('get.p',1);
+	public function adds(){
+		$page = intval($_GET['page']); //当前页 
+		$Model = new \Think\Model();
+		$sql = "SELECT COUNT(*) AS num FROM qph_integral_log";
+		$result = $Model->query($sql);
+		$total_num = $result['num'];//mysql_num_rows(mysql_query("select id from IntegralLog")); //总记录数 
+		$page_size = 2; //每页数量 
+		$page_total = ceil($total_num / $page_size); //总页数 
+		$page_start = $page * $page_size; 
+		$arr = array("total_num" = >$total_num, "page_size" = >$page_size, "page_total_num" = >$page_total, ); 
+		$query = mysql_query("SELECT id FROM qph_integral_log ORDER BY ID DESC LIMIT $page_start,$page_size"); 
+		while ($row = mysql_fetch_array($query)) { 
+		    $arr['list'][] = array('id' = >$row['id'] ); 
+		}  
+		die( json_encode($arr));exit;
 	}
+
 
 
 
