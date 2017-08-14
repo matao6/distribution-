@@ -113,5 +113,10 @@ $(function () {
         $(this).parent().siblings().find('a').removeClass('active');
         $(this).addClass('active');
     })
+
+    // 点击左侧菜单栏，toggleSlide
+    $('.slidebar-hook').on('click', '.list', function(){
+        $(this).siblings().slideToggle();
+    })
 })
 

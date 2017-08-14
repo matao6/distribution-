@@ -6,7 +6,17 @@ i.icon_right {
   font-weight: bold;
 }
 .red {
+  color: #f00 !important;
+}
+.green {
+  color: #008000 !important;
+}
+.error {
   color: #f00;
+}
+.modal.in .modal-dialog {
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .body-wrapper {
   background-color: #e7e8eb;

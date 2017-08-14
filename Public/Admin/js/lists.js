@@ -230,6 +230,15 @@ $(function () {
         })
     });
 
+    // 设置积分验证
+    $(document).on('blur', '#integral', function(){
+            var st = /^[-+]?[0-9]+(\.[0-9]+)?$/;
+            var thisSt = $(this).val();
+            if (!st.test(thisSt)) {
+                $(this).val('');
+            }
+    	})
+
     // 设置积分
     $('.setIntegral-hook').click(function(){
 		var uid = this.getAttribute('dataid');
@@ -306,47 +315,76 @@ $(function () {
 
     // 设置余额
     $('.setBalance-hook').click(function(){
-        bootbox.confirm({
-            buttons: {
-                confirm: {
-                    label: '确定'
-                },
-                cancel: {
-                    label: '取消'
-                }
-            },
-            title: '设置余额',
-            message: '<div class="jbox-container" style="height: 229px;">'+
-                            '<div>'+
-                                '<div class="formitems inline">'+
-                                    '<label class="fi-name">会员姓名：</label>'+
-                                    '<div class="form-controls pdt3"></div>'+
-                                '</div>'+
-                                '<div class="formitems inline">'+
-                                    '<label class="fi-name">当前余额：</label>'+
-                                    '<div class="form-controls pdt3">0.00</div>'+
-                                '</div>'+
-                                '<div class="formitems inline">'+
-                                    '<label class="fi-name"><span class="colorRed">*</span>增加或减少余额：</label>'+
-                                    '<div class="form-controls">'+
-                                        '<input name="payment" class="input mini" type="text">'+
-                                        '<span class="fi-help-text"></span>'+
-                                    '</div>'+
-                                '</div>'+
-                                '<div class="formitems inline">'+
-                                    '<label class="fi-name">备注：</label>'+
-                                    '<div class="form-controls">'+
-                                        '<textarea name="balance_remark" class="textarea" style="width:270px;height:120px;"></textarea>'+
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>',
-            callback: function (result) {
-                if (result) {
-                    alert('传到后台。。')
-                }
-            }
-        })
+
+		var uid = this.getAttribute('dataid');
+		$.ajax({
+            url: mt_network+'Members/getInfo',
+            type: 'POST',
+            async: false,
+            data:{id: uid},
+            success: function (data){
+                data = JSON.parse(data);
+                if (data.status != 1) { alert(data.msg); return false; }
+					bootbox.confirm({
+						buttons: {
+							confirm: {
+								label: '确定'
+							},
+							cancel: {
+								label: '取消'
+							}
+						},
+						title: '设置余额',
+						message: '<div class="jbox-container" style="height: 229px;">'+
+										'<div>'+
+											'<div class="formitems inline">'+
+												'<label class="fi-name">会员姓名：</label>'+
+												'<div class="form-controls pdt3">'+data.info.wx.wx_name+'</div>'+
+											'</div>'+
+											'<div class="formitems inline">'+
+												'<label class="fi-name">当前余额：</label>'+
+												'<div class="form-controls pdt3">'+data.info.account_balance+'</div>'+
+											'</div>'+
+											'<div class="formitems inline">'+
+												'<label class="fi-name"><span class="colorRed">*</span>增加或减少余额：</label>'+
+												'<div class="form-controls">'+
+													'<input name="account_balance" id="account_balance" class="input mini" type="text">'+
+													'<span class="fi-help-text"></span>'+
+												'</div>'+
+											'</div>'+
+											'<div class="formitems inline">'+
+												'<label class="fi-name">备注：</label>'+
+												'<div class="form-controls">'+
+													'<textarea name="account_note" id="account_note" class="textarea" style="width:270px;height:120px;"></textarea>'+
+												'</div>'+
+											'</div>'+
+										'</div>'+
+									'</div>',
+						callback: function (result) {
+							var status = true;
+							if (result) {
+								$.ajax({
+									url: mt_network+'Members/setAccountBalance',
+									type: 'POST',
+									async: false,
+									data:{id: uid,account_balance:$('#account_balance').val(),note:$('#account_note').val()},
+									success: function (datas){
+											datas = JSON.parse(datas);
+											if (datas.status != 1) {
+												alert(datas.msg);
+												status = false; 
+											}else{
+												alert(datas.msg);
+												location.reload();
+											}
+									}
+								});
+							}
+							return status;
+						}
+					});
+			}
+		});
     });
 
     // 发放优惠券

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>权限组增加</title>
+    <title>权限组编辑</title>
     <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/component-min.css">
     <link rel="stylesheet" href="/Public/Admin/css/reset.css">
@@ -64,7 +64,7 @@
             </dl>   -->
         </div>
         <div class="info">
-            <h1 class="content-right-title">添加权限组</h1>
+            <h1 class="content-right-title">编辑权限组</h1>
             <form action="" id="form-hook">
                 <div class="formitems">
                     <label for="" class="fi-name">
@@ -85,7 +85,7 @@
                 <div class="add_role_box">
                     <div class="add_role_list">
                         <div class="">
-                            <input type="checkbox" class="head" id="navi-hook"><label for="navi-hook">导航</label>
+                            <!-- <input type="checkbox" class="head" id="navi-hook"><label for="navi-hook">导航</label> -->
                         </div>
                         <ul>
                             <?php if(is_array($naviga)): foreach($naviga as $key=>$v): if(is_array($v['list'])): foreach($v['list'] as $key=>$vo): if(is_array($vo['list'])): foreach($vo['list'] as $key=>$val): ?><li class="menu_li">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="add_role_list">
                         <div class="">
-                            <input type="checkbox" class="head" id="link-hook"><label for="link-hook">连接</label>
+                            <!-- <input type="checkbox" class="head" id="link-hook"><label for="link-hook">连接</label> -->
                         </div>
                         <ul>
                             <?php if(is_array($nonaviga)): foreach($nonaviga as $key=>$val): ?><li class="menu_li">

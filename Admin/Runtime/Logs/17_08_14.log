@@ -1,0 +1,1705 @@
+[ 2017-08-14T09:04:11+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-08-14T09:04:32+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.022031s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000495s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '18911728732' ) AND ( `pwd` = '3d9188577cc9bfe9291ac66b5cc872b7' ) LIMIT 1   [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-08-14T09:04:38+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000482s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000460s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '18911728732' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000417s ]
+SQL: SELECT `id`,`url` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `url` <> '' )  [ RunTime:0.000208s ]
+SQL: UPDATE `qph_admin` SET `last_login_time`=1502672678 WHERE ( `mobile` = '18911728732' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.008765s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-08-14T09:04:38+08:00 ] 223.71.245.118 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-08-14T09:04:39+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000499s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000470s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2017-08-14T09:04:49+08:00 ] 61.151.217.45 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-08-14T09:05:43+08:00 ] 101.226.33.206 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000482s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+NOTIC: [8] Undefined index: User /www_test/fenxiao/Admin/Home/Model/LoginModel.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000449s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-08-14T09:05:48+08:00 ] 101.226.33.228 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+
+[ 2017-08-14T09:05:51+08:00 ] 101.226.33.228 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003571s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000082s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2017-08-14T09:10:52+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000468s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2017-08-14T09:10:53+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000431s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000456s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-08-14T09:10:55+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000726s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000385s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000983s ]
+
+[ 2017-08-14T09:11:00+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000679s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000364s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000287s ]
+
+[ 2017-08-14T09:14:07+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000703s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000371s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000269s ]
+
+[ 2017-08-14T09:14:49+08:00 ] 101.226.102.97 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000454s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+NOTIC: [8] Undefined index: User /www_test/fenxiao/Admin/Home/Model/LoginModel.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000419s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2017-08-14T09:17:37+08:00 ] 101.226.66.181 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-08-14T09:17:40+08:00 ] 101.226.66.181 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2017-08-14T10:41:29+08:00 ] 223.71.245.118 /admin.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-08-14T10:41:29+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2017-08-14T10:41:35+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000478s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000472s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '15010221225' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000423s ]
+SQL: SELECT `id`,`url` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `url` <> '' )  [ RunTime:0.000226s ]
+SQL: UPDATE `qph_admin` SET `last_login_time`=1502678495 WHERE ( `mobile` = '15010221225' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.004441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-08-14T10:41:36+08:00 ] 223.71.245.118 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-08-14T10:41:36+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000511s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000478s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2017-08-14T10:41:39+08:00 ] 223.71.245.118 /admin.php/Mgroup/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SELECT b.id, b.title, IFNULL(a.cn,0) AS cn FROM qph_mgroup b LEFT JOIN (SELECT COUNT(1) cn,t.m_group_id FROM qph_members  t GROUP BY t.m_group_id) a on a.m_group_id = b.id  WHERE  b.status != 2   ORDER BY b.id DESC [ RunTime:0.190026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2017-08-14T10:41:40+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000508s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000483s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2017-08-14T10:41:42+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000443s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-08-14T10:41:42+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000448s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000412s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-08-14T10:41:55+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000778s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000379s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000288s ]
+
+[ 2017-08-14T10:47:52+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000492s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000205s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000376s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000348s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Array to string conversion /www_test/fenxiao/Admin/Runtime/Cache/Home/2051fc566f55d9620b9eda4bc8aafacc.php 第 84 行.
+NOTIC: [8] Array to string conversion /www_test/fenxiao/Admin/Runtime/Cache/Home/2051fc566f55d9620b9eda4bc8aafacc.php 第 84 行.
+NOTIC: [8] Array to string conversion /www_test/fenxiao/Admin/Runtime/Cache/Home/2051fc566f55d9620b9eda4bc8aafacc.php 第 84 行.
+NOTIC: [8] Array to string conversion /www_test/fenxiao/Admin/Runtime/Cache/Home/2051fc566f55d9620b9eda4bc8aafacc.php 第 84 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-08-14T10:47:52+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000464s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000482s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-08-14T10:50:06+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000569s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000432s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000375s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-08-14T10:50:06+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000491s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000444s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2017-08-14T10:50:10+08:00 ] 223.71.245.118 /admin.php/Members/lists?p=&uid=&group=3&phone=&sort_type=&starttime=&endtime=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000583s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000232s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000369s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000375s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2017-08-14T10:50:11+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000487s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000459s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2017-08-14T10:50:46+08:00 ] 223.71.245.118 /admin.php/Members/lists?p=&uid=&group=3&phone=&sort_type=&starttime=&endtime=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000576s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000193s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND m_group_id = 3 AND `status` != 3 [ RunTime:0.000370s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND m_group_id = 3 AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000866s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-08-14T10:50:46+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000449s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000436s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2017-08-14T10:50:52+08:00 ] 223.71.245.118 /admin.php/Members/lists?p=&uid=&group=2&phone=&sort_type=&starttime=&endtime=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000611s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000212s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND m_group_id = 2 AND `status` != 3 [ RunTime:0.000409s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND m_group_id = 2 AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000817s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2017-08-14T10:50:52+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000492s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000455s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2017-08-14T10:51:14+08:00 ] 101.226.65.108 /admin.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-08-14T10:51:17+08:00 ] 101.226.65.108 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-08-14T10:51:22+08:00 ] 101.226.65.102 /admin.php/Mgroup/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-08-14T10:51:26+08:00 ] 101.226.65.102 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2017-08-14T10:57:21+08:00 ] 223.71.245.118 /admin.php/Members/lists?p=&uid=&group=2&phone=&sort_type=&starttime=&endtime=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000575s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000194s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND m_group_id = 2 AND `status` != 3 [ RunTime:0.000409s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND m_group_id = 2 AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-08-14T10:57:21+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000521s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000495s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-08-14T10:57:23+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000565s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000208s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000412s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000307s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2017-08-14T10:57:23+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000446s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000416s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-08-14T10:57:30+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000615s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000220s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000405s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-08-14T10:57:30+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000677s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000608s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-08-14T10:57:31+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000750s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000544s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000276s ]
+
+[ 2017-08-14T10:57:47+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000543s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000215s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000387s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000368s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-08-14T10:57:47+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000506s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000469s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-08-14T10:57:48+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000751s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000433s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000288s ]
+
+[ 2017-08-14T10:58:34+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000652s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000201s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000414s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-08-14T10:58:34+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000498s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000457s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-08-14T10:58:35+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000698s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000376s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000284s ]
+
+[ 2017-08-14T11:03:27+08:00 ] 61.151.228.22 /admin.php/Members/lists?p=&uid=&group=3&phone=&sort_type=&starttime=&endtime=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-08-14T11:03:31+08:00 ] 61.151.228.22 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-08-14T11:14:19+08:00 ] 223.71.245.118 /admin.php/Home/Index/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-08-14T11:14:19+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-08-14T11:14:27+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000479s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000435s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '15011165711' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000388s ]
+SQL: SELECT `id`,`url` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `url` <> '' )  [ RunTime:0.000232s ]
+SQL: UPDATE `qph_admin` SET `last_login_time`=1502680467 WHERE ( `mobile` = '15011165711' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.003902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-08-14T11:14:27+08:00 ] 223.71.245.118 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000082s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-08-14T11:14:27+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000447s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000420s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-08-14T11:15:28+08:00 ] 223.71.245.118 /admin.php/Member/GroupListHtml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_member` [ RunTime:0.000510s ]
+ERR: 1146:Table 'distribution.qph_member' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_member`
+SQL: SHOW COLUMNS FROM `qph_group` [ RunTime:0.000402s ]
+SQL: SELECT qph_group.id,qph_group.name,qph_group.add_time,qph_admin.name as Uname FROM `qph_group` INNER JOIN qph_admin on qph_group.creator = qph_admin.uid   [ RunTime:0.000257s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2017-08-14T11:15:28+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000498s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000469s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2017-08-14T11:15:32+08:00 ] 223.71.245.118 /admin.php/Member/GroupAddHtml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_member` [ RunTime:0.000475s ]
+ERR: 1146:Table 'distribution.qph_member' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_member`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000421s ]
+SQL: SELECT `id`,`url`,`name`,`fid`,`state` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 )  [ RunTime:0.000255s ]
+SQL: SELECT `id`,`url`,`name`,`fid`,`state` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 0 )  [ RunTime:0.000176s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-08-14T11:15:32+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000518s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000516s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-08-14T11:32:58+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-08-14T11:32:58+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-08-14T11:33:00+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+
+[ 2017-08-14T11:33:00+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2017-08-14T11:33:01+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+
+[ 2017-08-14T11:33:01+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-08-14T11:33:02+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-08-14T11:33:02+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-08-14T11:33:07+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000546s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000461s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '15010221225' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000410s ]
+SQL: SELECT `id`,`url` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `url` <> '' )  [ RunTime:0.000250s ]
+SQL: UPDATE `qph_admin` SET `last_login_time`=1502681587 WHERE ( `mobile` = '15010221225' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.003737s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-08-14T11:33:07+08:00 ] 223.71.245.118 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2017-08-14T11:33:07+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000414s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000409s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2017-08-14T11:33:10+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000533s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000201s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000362s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-08-14T11:33:10+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000456s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000423s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2017-08-14T11:33:11+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000759s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000419s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000340s ]
+
+[ 2017-08-14T11:43:39+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000575s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000218s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000376s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-08-14T11:43:39+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000493s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000454s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-08-14T11:43:40+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000705s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000374s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000284s ]
+
+[ 2017-08-14T11:43:47+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000756s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000283s ]
+NOTIC: [8] Undefined variable: integral /www_test/fenxiao/Admin/Home/Controller/MembersController.class.php 第 210 行.
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000422s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`note`,`createtime`,`createuserid`) VALUES (375,1,'0.00',0,'嗖嗖嗖',1502682227,9) [ RunTime:0.000207s ]
+SQL: UPDATE `qph_members` SET `integral`=0 WHERE ( `id` = 375 ) [ RunTime:0.000217s ]
+
+[ 2017-08-14T11:43:49+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000536s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000196s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000379s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-08-14T11:43:49+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000496s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000466s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-08-14T11:44:16+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000517s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000190s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000350s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-08-14T11:44:17+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000441s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000421s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2017-08-14T11:44:18+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000720s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000425s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000309s ]
+
+[ 2017-08-14T11:44:22+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000764s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000329s ]
+NOTIC: [8] Undefined variable: integral /www_test/fenxiao/Admin/Home/Controller/MembersController.class.php 第 210 行.
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000464s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`note`,`createtime`,`createuserid`) VALUES (375,1,'0.00',0,'顶顶顶顶',1502682262,9) [ RunTime:0.000270s ]
+SQL: UPDATE `qph_members` SET `integral`=0 WHERE ( `id` = 375 ) [ RunTime:0.000236s ]
+
+[ 2017-08-14T11:44:58+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000694s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000311s ]
+NOTIC: [8] Undefined variable: integral /www_test/fenxiao/Admin/Home/Controller/MembersController.class.php 第 210 行.
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000392s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`note`,`createtime`,`createuserid`) VALUES (375,1,'0.00',0,'顶顶顶顶',1502682298,9) [ RunTime:0.000215s ]
+SQL: UPDATE `qph_members` SET `account_balance`=0 WHERE ( `id` = 375 ) [ RunTime:0.000182s ]
+
+[ 2017-08-14T11:45:19+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000770s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000414s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`note`,`createtime`,`createuserid`) VALUES (375,1,'0.00',100,'顶顶顶顶',1502682319,9) [ RunTime:0.000239s ]
+SQL: UPDATE `qph_members` SET `account_balance`=100 WHERE ( `id` = 375 ) [ RunTime:0.011467s ]
+
+[ 2017-08-14T11:45:20+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000536s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000236s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000370s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2017-08-14T11:45:20+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000495s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000429s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-08-14T11:46:03+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000565s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000214s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000367s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-08-14T11:46:03+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000458s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000428s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2017-08-14T11:46:04+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000756s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000417s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000305s ]
+
+[ 2017-08-14T11:46:08+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000729s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000498s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`note`,`createtime`,`createuserid`) VALUES (375,1,'100.00',120,'得到的',1502682368,9) [ RunTime:0.000238s ]
+SQL: UPDATE `qph_members` SET `account_balance`=120 WHERE ( `id` = 375 ) [ RunTime:0.000209s ]
+
+[ 2017-08-14T11:46:10+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000576s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000207s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000395s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000332s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009185s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009234s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-08-14T11:46:10+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000507s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000441s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-08-14T11:46:41+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000761s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000418s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000307s ]
+
+[ 2017-08-14T11:46:47+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000717s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000418s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`money`,`note`,`createtime`,`createuserid`) VALUES (375,1,'120.00',140,'20','是电风扇的',1502682407,9) [ RunTime:0.000198s ]
+SQL: UPDATE `qph_members` SET `account_balance`=140 WHERE ( `id` = 375 ) [ RunTime:0.000174s ]
+
+[ 2017-08-14T11:46:48+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000585s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000206s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000439s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000455s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2017-08-14T11:46:48+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000543s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000479s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-08-14T11:46:59+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.288002s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `qph_members_wxinfo` [ RunTime:0.000425s ]
+SQL: SELECT * FROM `qph_members_wxinfo` WHERE ( uid=375 ) LIMIT 1   [ RunTime:0.000292s ]
+
+[ 2017-08-14T11:47:04+08:00 ] 223.71.245.118 /admin.php/Members/setAccountBalance
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_members` [ RunTime:0.000717s ]
+SQL: SELECT * FROM `qph_members` WHERE ( id=375 AND status!=3 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `qph_money_log` [ RunTime:0.000438s ]
+SQL: INSERT INTO `qph_money_log` (`uid`,`type`,`original`,`last`,`money`,`note`,`createtime`,`createuserid`) VALUES (375,1,'140.00',110,'-30','三发松岛枫',1502682424,9) [ RunTime:0.000254s ]
+SQL: UPDATE `qph_members` SET `account_balance`=110 WHERE ( `id` = 375 ) [ RunTime:0.000809s ]
+
+[ 2017-08-14T11:47:05+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_mgroup` [ RunTime:0.000576s ]
+SQL: SELECT * FROM `qph_mgroup` WHERE ( status=1 )  [ RunTime:0.000197s ]
+SQL: SELECT COUNT(*) AS num FROM qph_members WHERE  1  AND `status` != 3 [ RunTime:0.000388s ]
+SQL: SELECT * FROM qph_members WHERE  1  AND `status` != 3 ORDER BY id DESC LIMIT 0,20 [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008536s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-08-14T11:47:06+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000455s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000497s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-08-14T12:58:45+08:00 ] 223.71.245.118 /admin.php/Members/getInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-08-14T12:58:45+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-08-14T12:58:47+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2017-08-14T12:58:47+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-08-14T13:52:44+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-08-14T13:52:44+08:00 ] 223.71.245.118 /admin.php/Login/Login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-08-14T14:44:56+08:00 ] 223.71.245.118 /admin.php/Login/PostLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000489s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_admin` [ RunTime:0.000475s ]
+SQL: SELECT `uid`,`name`,`last_login_ip`,`group_id`,`state`,`pwd` FROM `qph_admin` WHERE ( `mobile` = '18911728732' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000398s ]
+SQL: SELECT `id`,`url` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `url` <> '' )  [ RunTime:0.000211s ]
+SQL: UPDATE `qph_admin` SET `last_login_time`=1502693096 WHERE ( `mobile` = '18911728732' ) AND ( `pwd` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.003774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2017-08-14T14:44:56+08:00 ] 223.71.245.118 /admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2017-08-14T14:44:57+08:00 ] 223.71.245.118 /admin.php/Login/Naviga
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /www_test/fenxiao/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `qph_login` [ RunTime:0.000483s ]
+ERR: 1146:Table 'distribution.qph_login' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `qph_login`
+SQL: SHOW COLUMNS FROM `qph_navigation` [ RunTime:0.000409s ]
+SQL: SELECT `id`,`url`,`name`,`fid` FROM `qph_navigation` WHERE ( `state` = 1 ) AND ( `type` = 1 ) ORDER BY sort asc  [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-08-14T14:44:58+08:00 ] 223.71.245.118 /admin.php/Members/lists
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+

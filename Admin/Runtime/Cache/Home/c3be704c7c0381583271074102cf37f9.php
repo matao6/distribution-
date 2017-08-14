@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>添加导航</title>
 	<link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/Public/Admin/css/memberAddHtml.css"> -->
     <link rel="stylesheet" href="/Public/Admin/css/component-min.css">
     <link rel="stylesheet" href="/Public/Admin/css/reset.css">
 	<link rel="stylesheet" href="/Public/Admin/css/bootstrap-switch.min.css">    
@@ -80,7 +79,7 @@
                         </label>
                         <div class="form-controls">
                             <select class="select" name="fid">
-                                <option value="0">--请选择--</option>
+                                <option value="">--请选择--</option>
                                 <?php if(is_array($list)): foreach($list as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option>
                                     <?php if(is_array($v['list'])): foreach($v['list'] as $key=>$vo): ?><option value="<?php echo ($vo["id"]); ?>">--<?php echo ($vo["name"]); ?></option><?php endforeach; endif; endforeach; endif; ?>
                             </select>

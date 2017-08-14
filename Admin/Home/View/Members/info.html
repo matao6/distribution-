@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>订货商详情</title>
+    <title>会员详情</title>
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
@@ -211,7 +211,7 @@
                 </div>
 
                 <!-- 积分明细 -->
-                <div class="tc hide">
+                <div class="tc hide" id="ul_lists">
                     <table class="wxtables mgt15" id="j-table-point">
                         <colgroup>
                             <col width="25%">
@@ -239,7 +239,8 @@
                     </table>
 
                     <div class="mgt10">
-                        <div class="paginate">
+                        <div class="paginate" id="integral_ul_lists">
+							<!--
                             <a href="javascript:;" class="prev disabled"></a>
                             <a class="cur">1</a>
                             <a href="">2</a>
@@ -249,6 +250,7 @@
                             <a href="">122</a>
                             <a href="" class="next"></a>
                             <span class="mgr5">页</span>
+							-->
                         </div>
                     </div>
                 </div>
@@ -433,3 +435,61 @@
 </body>
 
 </html>
+<script type="text/javascript">
+<!--
+	getData(1);
+	var page_cur = 1; //当前页 
+	var total_num, page_size, page_total_num;//总记录数,每页条数,总页数
+	function getData(page) {
+		$.ajax({ 
+			type: 'GET', 
+			url: 'http://fenxiao.qphvip.com/admin.php/Members/adds', 
+			data: { 'page': page - 1 }, 
+			success: function(data) {
+				$("#ul_lists").empty(); 
+				datas = JSON.parse(data);
+				total_num = datas.total_num; //总记录数 
+				page_size = datas.page_size; //每页数量 
+				page_cur = page; //当前页 
+				page_total_num = datas.page_total_num; //总页数 
+				var li = ""; 
+				var list = datas.list; 
+				$.each(list, 
+				function(index, array) {
+					li += "<li><a href='#'>" + array['id'] + "</a></li>"; 
+				}); 
+				$("#ul_lists").append(li); 
+			}, 
+			complete: function() { 
+				getPageBar(); //js生成分页，可用程序代替 
+			}, 
+			error: function() { 
+				alert("数据异常,请检查是否json格式"); 
+			} 
+		}); 
+	}
+
+	function getPageBar() { //js生成分页 
+		if (page_cur > page_total_num) page_cur = page_total_num; //当前页大于最大页数 
+		if (page_cur < 1) page_cur = 1; //当前页小于1 
+		page_str = "<span>共" + total_num + "条</span><span>" + page_cur + "/" + page_total_num + "</span>"; 
+		if (page_cur == 1) { //若是第一页 
+			page_str += "<span>首页</span><span>上一页</span>"; 
+		} else { 
+			page_str += "<span><a href='javascript:void(0)' data-page='1'>首页</a></span><span><a href='javascript:void(0)' data-page='" + (page_cur - 1) + "'>上一页</a></span>"; 
+		} 
+		if (page_cur >= page_total_num) { //若是最后页 
+			page_str += "<span>下一页</span><span>尾页</span>"; 
+		} else { 
+			page_str += "<span><a href='javascript:void(0)' data-page='" + (parseInt(page_cur) + 1) + "'>下一页</a></span><span><a href='javascript:void(0)' data-page='" + page_total_num + "'>尾页</a></span>"; 
+		} 
+		alert(page_str)
+		$("#integral_ul_lists").html('sssssssssssss'); 
+	}
+	$("#integral_ul_lists a").live('click',function() { //live 向未来的元素添加事件处理器,不可用bind 
+		var page = $(this).attr("data-page"); //获取当前页 
+		getData(page) 
+	});
+	
+//-->
+</script>

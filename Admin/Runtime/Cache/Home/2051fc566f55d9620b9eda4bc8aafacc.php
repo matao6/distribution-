@@ -80,8 +80,8 @@
                             </div>
                             <div class="col">
                                 <span class="tbs-txt">所属分组：</span>
-                                <select name="" id="" class="select">
-                                    <option value="">test</option>
+                                <select name="group" id="group" class="select">
+                                    <?php if(is_array($group_list)): foreach($group_list as $k=>$v): ?><option value="<?php echo ($v['id']); ?>" <?php if($group == $v['id']): ?>selected<?php endif; ?>><?php echo ($v['title']); ?></option><?php endforeach; endif; ?>
                                 </select>
                             </div>
                             <div class="col">
@@ -183,7 +183,7 @@
 									<a href="javascript:;" class="btn btn-mini btn-primary setGrade-hook">设等级</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning setIntegral-hook" dataid="<?php echo ($val['id']); ?>">调整积分</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning">设置上级</a>
-									<a href="javascript:;" class="btn btn-mini btn-warning setBalance-hook">调整余额</a>
+									<a href="javascript:;" class="btn btn-mini btn-warning setBalance-hook" dataid="<?php echo ($val['id']); ?>">调整余额</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning sendDiscounts-hook">发放优惠券</a>
 									<a href="javascript:;" class="btn btn-mini btn-success sendMoney-hook">发红包</a>
 									<a href="javascript:;" class="btn btn-mini btn-success resetPassword-hook" dataid="<?php echo ($val['id']); ?>">重置支付密码</a>
