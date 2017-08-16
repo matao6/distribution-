@@ -8,3 +8,8 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000309s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
 
+[ 2017-08-14T15:12:40+08:00 ] 223.71.245.118 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+

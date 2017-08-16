@@ -289,22 +289,30 @@ $(function () {
 						callback: function (result) {
 							var status = true;
 							if (result) {
-								$.ajax({
-									url: mt_network+'Members/setIntegral',
-									type: 'POST',
-									async: false,
-									data:{id: uid,integral:$('#integral').val(),note:$('#note').val()},
-									success: function (datas){
-											datas = JSON.parse(datas);
-											if (datas.status != 1) {
-												alert(datas.msg);
-												status = false; 
-											}else{
-												alert(datas.msg);
-												location.reload();
-											}
-									}
-								});
+								var st = /^[-+]?[0-9]+(\.[0-9]+)?$/;
+								var thisSt = $('#integral').val();
+								if (!st.test(thisSt)) {
+									$('#integral').val('');
+									alert('输入格式有误！');
+									status = false;
+								}else{
+									$.ajax({
+										url: mt_network+'Members/setIntegral',
+										type: 'POST',
+										async: false,
+										data:{id: uid,integral:$('#integral').val(),note:$('#note').val()},
+										success: function (datas){
+												datas = JSON.parse(datas);
+												if (datas.status != 1) {
+													alert(datas.msg);
+													status = false; 
+												}else{
+													alert(datas.msg);
+													location.reload();
+												}
+										}
+									});
+								}
 							}
 							return status;
 						}
@@ -363,22 +371,30 @@ $(function () {
 						callback: function (result) {
 							var status = true;
 							if (result) {
-								$.ajax({
-									url: mt_network+'Members/setAccountBalance',
-									type: 'POST',
-									async: false,
-									data:{id: uid,account_balance:$('#account_balance').val(),note:$('#account_note').val()},
-									success: function (datas){
-											datas = JSON.parse(datas);
-											if (datas.status != 1) {
-												alert(datas.msg);
-												status = false; 
-											}else{
-												alert(datas.msg);
-												location.reload();
-											}
-									}
-								});
+								var st = /^[-+]?[0-9]+(\.[0-9]+)?$/;
+								var thisSt = $('#account_balance').val();
+								if (!st.test(thisSt)) {
+									$('#account_balance').val('');
+									alert('输入格式有误！');
+									status = false;
+								}else{
+									$.ajax({
+										url: mt_network+'Members/setAccountBalance',
+										type: 'POST',
+										async: false,
+										data:{id: uid,account_balance:$('#account_balance').val(),note:$('#account_note').val()},
+										success: function (datas){
+												datas = JSON.parse(datas);
+												if (datas.status != 1) {
+													alert(datas.msg);
+													status = false; 
+												}else{
+													alert(datas.msg);
+													location.reload();
+												}
+										}
+									});
+								}
 							}
 							return status;
 						}

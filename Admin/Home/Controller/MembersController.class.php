@@ -32,6 +32,10 @@ class MembersController extends AdminController {
 		'2'=>'卖家调整'
 	);
 
+	public $money_type = array(
+		'1'=>'卖家调整余额'
+	);
+
 
 	/**
 	*  用户列表
@@ -44,15 +48,22 @@ class MembersController extends AdminController {
 		$endtime = I('get.endtime','');
 		$group = I('get.group','');
 		$status = I('get.status','1');
+		$sort = I('get.sort_type','');
 		$p = I('get.p',1);
 		$group_list = M('Mgroup')->where('status=1')->select();
 		$where = ' 1 ';
+		$order = ' ORDER BY id DESC';
 		if (!empty($uid)){ $where .= " AND (`id` = '".$uid."' OR realname ='".$uid."')"; }
 		if (!empty($phone)){ $where .= " AND (`phone` = '".$phone."' OR username = '".$phone."')"; }
 		if (!empty($starttime)){ $where .= ' AND createtime >= '.strtotime($starttime.' 00:00:00'); }
 		if (!empty($endtime)){ $where .= ' AND createtime <= '.strtotime($endtime.' 23:59:59'); }
 		if (!empty($group)){ $where .= ' AND m_group_id = '.$group; }
 		if (!empty($status)){ $where .= ' AND `status` != 3'; }
+		if (!empty($sort)){
+			if ($sort == '1'){
+				$order = ' ORDER BY `integral` DESC'; 
+			}
+		}
 		$sql = "SELECT COUNT(*) AS num FROM qph_members WHERE ".$where;
 		$Model = new \Think\Model();
 		$result = $Model->getOne($sql);
@@ -61,7 +72,7 @@ class MembersController extends AdminController {
 			$limit = 20;
 			$Page = new \Think\Page($result['num'],$limit);
 			$show = $Page->new_show();
-			$_sql = "SELECT * FROM qph_members WHERE ".$where.' ORDER BY id DESC LIMIT '.$Page->firstRow.','.$Page->listRows;
+			$_sql = "SELECT * FROM qph_members WHERE ".$where.$order.' , id DESC LIMIT '.$Page->firstRow.','.$Page->listRows;
 			$list = $Model->query($_sql);
 			$this->assign('page',$show);
 		}
@@ -73,6 +84,7 @@ class MembersController extends AdminController {
 		$this->assign('starttime',$starttime);
 		$this->assign('endtime',$endtime);
 		$this->assign('status',$status);
+		$this->assign('sort',$sort);
 
 
 		$this->assign('sort_type',$this->sort_type);
@@ -265,21 +277,52 @@ class MembersController extends AdminController {
 		die(json_encode(array('status'=>'1','msg'=>'恭喜您，用户设置分组成功！')));exit;
 	}
 
-	public function adds(){
-		$page = intval($_GET['page']); //当前页 
+	/**
+	*  用户详情积分变动日志
+	* 2017-08-14 Aries
+	* */
+	public function getIntegralLog(){
+		$page = intval($_GET['page']);
+		$uid = intval($_GET['uid']);
 		$Model = new \Think\Model();
-		$sql = "SELECT COUNT(*) AS num FROM qph_integral_log";
-		$result = $Model->query($sql);
-		$total_num = $result['num'];//mysql_num_rows(mysql_query("select id from IntegralLog")); //总记录数 
-		$page_size = 2; //每页数量 
-		$page_total = ceil($total_num / $page_size); //总页数 
+		$sql = "SELECT COUNT(*) AS num FROM qph_integral_log WHERE uid=".$uid;
+		$result = $Model->getOne($sql);
+		$total_num = $result['num'];
+		$page_size = 10;
+		$page_total = ceil($total_num / $page_size);
 		$page_start = $page * $page_size; 
-		$arr = array("total_num" = >$total_num, "page_size" = >$page_size, "page_total_num" = >$page_total, ); 
-		$query = mysql_query("SELECT id FROM qph_integral_log ORDER BY ID DESC LIMIT $page_start,$page_size"); 
-		while ($row = mysql_fetch_array($query)) { 
-		    $arr['list'][] = array('id' = >$row['id'] ); 
-		}  
-		die( json_encode($arr));exit;
+		$arr = array("total_num" =>$total_num, "page_size" =>$page_size, "page_total_num" =>$page_total); 
+		$query = $Model->query("SELECT `type`, `original`, `last`, `change`, note, createtime FROM qph_integral_log WHERE uid =".$uid." ORDER BY id DESC LIMIT $page_start,$page_size"); 
+		foreach($query as $k=>$v){
+			$v['types'] = $this->integral_type[$v['type']];
+			$v['createtime'] = date('Y-m-d H:i:s',$v['createtime']);
+			$arr['list'][] = $v; 
+		}
+		die( json_encode($arr) );exit;
+	}
+
+	/**
+	*  用户详情余额变动日志
+	* 2017-08-14 Aries
+	* */
+	public function getMoneyLog(){
+		$page = intval($_GET['page']);
+		$uid = intval($_GET['uid']);
+		$Model = new \Think\Model();
+		$sql = "SELECT COUNT(*) AS num FROM qph_money_log WHERE uid=".$uid;
+		$result = $Model->getOne($sql);
+		$total_num = $result['num'];
+		$page_size = 10;
+		$page_total = ceil($total_num / $page_size);
+		$page_start = $page * $page_size; 
+		$arr = array("total_num" =>$total_num, "page_size" =>$page_size, "page_total_num" =>$page_total); 
+		$query = $Model->query("SELECT `type`, `original`, `last`, `money`, note, createtime FROM qph_money_log WHERE uid =".$uid." ORDER BY id DESC LIMIT $page_start,$page_size"); 
+		foreach($query as $k=>$v){
+			$v['types'] = $this->money_type[$v['type']];
+			$v['createtime'] = date('Y-m-d H:i:s',$v['createtime']);
+			$arr['list'][] = $v; 
+		}
+		die( json_encode($arr) );exit;
 	}
 
 

@@ -81,6 +81,7 @@
                             <div class="col">
                                 <span class="tbs-txt">所属分组：</span>
                                 <select name="group" id="group" class="select">
+									<option value=''>--请选择--</option>
                                     <?php if(is_array($group_list)): foreach($group_list as $k=>$v): ?><option value="<?php echo ($v['id']); ?>" <?php if($group == $v['id']): ?>selected<?php endif; ?>><?php echo ($v['title']); ?></option><?php endforeach; endif; ?>
                                 </select>
                             </div>
@@ -113,7 +114,7 @@
                                 <span class="tbs-txt">排序：</span>
                                 <select name="sort_type" id="sort_type" class="select">
 									<option value=''>--请选择--</option>
-									<?php if(is_array($sort_type)): foreach($sort_type as $k=>$v): ?><option value="<?php echo ($k); ?>" <?php if($sort_type == $k): ?>selected<?php endif; ?>><?php echo ($v); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($sort_type)): foreach($sort_type as $k=>$v): ?><option value="<?php echo ($k); ?>" <?php if($sort == $k): ?>selected<?php endif; ?>><?php echo ($v); ?></option><?php endforeach; endif; ?>
 								</select>
                             </div>
                             <div class="col col-2">
@@ -182,7 +183,7 @@
 									<a href="javascript:;" class="btn btn-mini btn-primary setFenBusiness-hook">设置是分销商</a>
 									<a href="javascript:;" class="btn btn-mini btn-primary setGrade-hook">设等级</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning setIntegral-hook" dataid="<?php echo ($val['id']); ?>">调整积分</a>
-									<a href="javascript:;" class="btn btn-mini btn-warning">设置上级</a>
+									<a href="/admin.php/Msuperior/lists/id/<?php echo ($val['id']); ?>" class="btn btn-mini btn-warning">设置上级</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning setBalance-hook" dataid="<?php echo ($val['id']); ?>">调整余额</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning sendDiscounts-hook">发放优惠券</a>
 									<a href="javascript:;" class="btn btn-mini btn-success sendMoney-hook">发红包</a>

@@ -65,7 +65,7 @@
         </div>
         <div class="info">
             <h1 class="content-right-title">添加权限组</h1>
-            <form action="" id="form-hook">
+            <form action="" id="form-hook" method="POST">
                 <div class="formitems">
                     <label for="" class="fi-name">
                         <span class="red">*</span>权限组名称：
@@ -119,6 +119,7 @@
 	<script type="text/javascript" src="/Public/Admin/js/bootstrap-switch.min.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/messages_zh.js"></script>
+	<script type="text/javascript" src="/Public/Admin/js/jquery.form.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/bootbox.min.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/common.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/groupaddhtml.js"></script>

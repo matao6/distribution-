@@ -8,6 +8,7 @@ var mt_vip = 45, mt_manage = 16;
 // 1-导航列表active值, 2-导航增加active, 3-管理员列表, 4-管理员增加 --初始active的值--data-id
 var navigalisthtml_data_id = 20, navigaaddhtml_data_id = 18, memberlisthtml_data_id = 38, info_data_id = 47;
 var memberaddhtml_data_id = 25, grouplisthtml_date_id = 50, groupaddhtml_data_id = 52, membersLists_data_id = 46, grouplist = 48;
+var membershiplevel_data_id=58;
 
 // 选择导航
 function choiceNavigation(id, leftActive) {

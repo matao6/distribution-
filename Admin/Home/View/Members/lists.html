@@ -81,6 +81,7 @@
                             <div class="col">
                                 <span class="tbs-txt">所属分组：</span>
                                 <select name="group" id="group" class="select">
+									<option value=''>--请选择--</option>
                                     <foreach item='v' name='group_list' key='k'>
 											<option value="{$v['id']}" <if condition="$group eq $v['id']"> selected </if>>{$v['title']}</option>
 									</foreach>
@@ -116,7 +117,7 @@
                                 <select name="sort_type" id="sort_type" class="select">
 									<option value=''>--请选择--</option>
 									<foreach item='v' name='sort_type' key='k'>
-											<option value="{$k}" <if condition="$sort_type eq $k"> selected </if>>{$v}</option>
+											<option value="{$k}" <if condition="$sort eq $k"> selected </if>>{$v}</option>
 									</foreach>
 								</select>
                             </div>
