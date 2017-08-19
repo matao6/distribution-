@@ -52,19 +52,15 @@ class MembersController extends AdminController {
 		$p = I('get.p',1);
 		$group_list = M('Mgroup')->where('status=1')->select();
 		$where = ' 1 ';
-		$order = ' ORDER BY id DESC';
-		if (!empty($uid)){ $where .= " AND (`id` = '".$uid."' OR realname ='".$uid."')"; }
-		if (!empty($phone)){ $where .= " AND (`phone` = '".$phone."' OR username = '".$phone."')"; }
-		if (!empty($starttime)){ $where .= ' AND createtime >= '.strtotime($starttime.' 00:00:00'); }
-		if (!empty($endtime)){ $where .= ' AND createtime <= '.strtotime($endtime.' 23:59:59'); }
-		if (!empty($group)){ $where .= ' AND m_group_id = '.$group; }
-		if (!empty($status)){ $where .= ' AND `status` != 3'; }
-		if (!empty($sort)){
-			if ($sort == '1'){
-				$order = ' ORDER BY `integral` DESC'; 
-			}
-		}
-		$sql = "SELECT COUNT(*) AS num FROM qph_members WHERE ".$where;
+		$order = ' ORDER BY a.id DESC';
+		if (!empty($uid)){ $where .= " AND (a.id = '".$uid."' OR a.realname ='".$uid."')"; }
+		if (!empty($phone)){ $where .= " AND (a.phone = '".$phone."' OR a.username = '".$phone."')"; }
+		if (!empty($starttime)){ $where .= ' AND a.createtime >= '.strtotime($starttime.' 00:00:00'); }
+		if (!empty($endtime)){ $where .= ' AND a.createtime <= '.strtotime($endtime.' 23:59:59'); }
+		if (!empty($group)){ $where .= ' AND a.m_group_id = '.$group; }
+		if (!empty($status)){ $where .= ' AND a.status != 3'; }
+		if (!empty($sort)){ if ($sort == '1'){ $order = ' ORDER BY a.integral DESC';  } }
+		$sql = "SELECT COUNT(*) AS num FROM qph_members AS a WHERE ".$where;
 		$Model = new \Think\Model();
 		$result = $Model->getOne($sql);
 		$list = array();
@@ -72,7 +68,7 @@ class MembersController extends AdminController {
 			$limit = 20;
 			$Page = new \Think\Page($result['num'],$limit);
 			$show = $Page->new_show();
-			$_sql = "SELECT * FROM qph_members WHERE ".$where.$order.' , id DESC LIMIT '.$Page->firstRow.','.$Page->listRows;
+			$_sql = "SELECT a.*, b.wx_name AS superior_name FROM qph_members AS a LEFT JOIN qph_members_wxinfo AS b ON a.superior_id = b.uid WHERE ".$where.$order.' , a.id DESC LIMIT '.$Page->firstRow.','.$Page->listRows;
 			$list = $Model->query($_sql);
 			$this->assign('page',$show);
 		}

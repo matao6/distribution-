@@ -173,7 +173,7 @@
 									<p>昵称：{$val['username']}</p>
 									<p>等级：暂无数据</p>
 									<p>注册时间：{$val.createtime|date='Y-m-d H:i:s',###}</p>
-									<if condition="$val['superior_id'] neq '0'"><p>上级：</p></if>
+									<if condition="$val['superior_id'] neq '0'"><p>上级：{$val.superior_name}</p></if>
 								</td>
 								<td>
 									<p>消费：￥<span>0.00</span></p>
@@ -209,7 +209,7 @@
                 <div class="mgt10">
                     <div class="paginate">
 						{$page}
-<!--
+						<!--
                         <a href="javascript:;" class="prev disabled"></a>
                         <a class="cur">1</a>
                         <a href="/User/lists/p/2.html">2</a>
@@ -221,7 +221,7 @@
                         <input class="" type="text">
                         <a href="" class="goto">确定</a>
                         <span class="mgr5">页</span>
--->
+						-->
                     </div>
                 </div>
             </div>

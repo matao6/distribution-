@@ -75,7 +75,7 @@
                 <input type="submit" class="btn btn-primary" value="保存">
             </form>
             <div class="">
-                <a href="javascript:;" class="btn btn-success">添加会员等级</a>
+                <a href="javascript:;" class="btn btn-success addLevel-hook">添加会员等级</a>
             </div>
             <table class="wxtables mgt15">
                 <colgroup>

@@ -67,13 +67,15 @@
             <ul class="info-table mgl15">
                 <li class="">
                     <span class="ftblod">微信昵称/手机号码：</span>
-                    <span>test</span>
+                    <span><?php echo ($userinfo['wx_name']); ?>/<?php echo ($userinfo['phone']); ?></span>
                 </li>
             </ul>
-            <form action="" method="post" name="">
+            <form action="/admin.php/Msuperior/lists" method="get" id="form1">
+				<input type="hidden" name="id" id='id' value='<?php echo ($id); ?>'>
+				<input type="hidden" name="p" id='p' value=''>
                 <div class="tables-searchbox">
-                    <input class="input" name="name" value="" placeholder="姓名/ID" type="text">
-                    <input class="input" name="mobile" value="" placeholder="手机号码/微信昵称" type="text">
+                    <input class="input" name="uid" value="<?php echo ($uid); ?>" id="uid" placeholder="姓名/ID" type="text">
+                    <input class="input" name="phone" value="<?php echo ($phone); ?>" id="phone" placeholder="手机号码/微信昵称" type="text">
                     <input autocomplete="off" name="start_time" id="start_date" value="" placeholder="注册时间" class="input Wdate" type="text" readonly>
                     <span class="mgr5">至</span>
                     <input autocomplete="off" name="end_time" id="end_date" value="" placeholder="注册时间" class="input Wdate" type="text" readonly>
@@ -103,29 +105,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <img src="" alt="" width="50" height="50">
-                        </td>
-                        <td>
-                            <p>test</p>
-                            <p></p>
-                        </td>
-                        <td>test</td>
-                        <td>¥test</td>
-                        <td>
-                            <p></p>
-                            <p></p>
-                        </td>
-                        <td>test</td>
-                        <td>
-                            <p>
-                                <a href="javascript:;" class="btn setHigherUp-hook">设为上级</a>
-                            </p>
-                        </td>
-                    </tr>
+					<?php if(is_array($list)): foreach($list as $k=>$val): ?><tr>
+							<td>
+								<img src="<?php echo ($val['wx_img']); ?>" alt="" width="50" height="50">
+							</td>
+							<td>
+								<p><?php echo ($val['wx_name']); ?></p>
+								<p><?php echo ($val['phone']); ?></p>
+							</td>
+							<td><?php echo ($val['id']); ?></td>
+							<td>¥test</td>
+							<td>
+								<p><?php echo ($val['superior_name']); ?></p>
+								<p></p>
+							</td>
+							<td><?php echo (date('Y-m-d H:i:s',$val["createtime"])); ?></td>
+							<td>
+								<p>
+									<a href="javascript:;" class="btn setHigherUp-hook" dataid="<?php echo ($val['id']); ?>">设为上级</a>
+								</p>
+							</td>
+						</tr><?php endforeach; endif; ?>
                 </tbody>
             </table>
+			<div class="mgt10">
+				<div class="paginate">
+					<?php echo ($page); ?>
+				</div>
+			</div>
         </div>
     </div>
     <div class="footer"></div>
@@ -140,3 +147,23 @@
 </body>
 
 </html>
+<script type="text/javascript">
+<!--
+	$('#sele').click(function(){
+			var page = parseInt($('#page').val());
+			var last = parseInt($('#last').val());
+			if (page > last){ alert('超出总页数'); return false; }
+			$('#p').val($('#page').val());
+			$('#form1').submit();
+	});
+
+	function keyPress(ob) {
+		if (!ob.value.match(/^[\+\-]?\d*?\.?\d*?$/)){
+			ob.value = '';
+		}else{
+			ob.t_value = ob.value;
+		}
+		if (ob.value.match(/^(?:[\+\-]?\d+(?:\.\d+)?)?$/)) ob.o_value = ob.value;
+	}
+//-->
+</script>

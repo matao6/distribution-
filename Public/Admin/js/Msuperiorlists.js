@@ -52,7 +52,17 @@ $(function(){
             message: '确认要将此会员设置为顶级会员吗？',
             callback: function(result) {
                 if (result) {
-                    alert('我是卖报的小画家')
+                    $.ajax({
+						url: mt_network+'Msuperior/setTop',
+						type: 'POST',
+						async: false,
+						data:{id: $('#id').val()},
+						success: function (datas){
+								datas = JSON.parse(datas);
+								alert(datas.msg);
+								location.reload();
+						}
+					});
                 }
             }
         })
@@ -60,6 +70,7 @@ $(function(){
 
     // 设为上级
     $('.setHigherUp-hook').click(function(){
+		var uid = this.getAttribute('dataid');
         bootbox.confirm({
             size: 'small', 
             buttons: {
@@ -74,7 +85,17 @@ $(function(){
             message: '确认要将此会员设为上级吗？',
             callback: function(result) {
                 if (result) {
-                    alert('小丫，小二郎')
+					$.ajax({
+						url: mt_network+'Msuperior/setSuperior',
+						type: 'POST',
+						async: false,
+						data:{id: $('#id').val(),uid: uid},
+						success: function (datas){
+								datas = JSON.parse(datas);
+								alert(datas.msg);
+								location.reload();
+						}
+					});
                 }
             }
         })

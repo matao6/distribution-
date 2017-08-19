@@ -168,7 +168,7 @@
 									<p>昵称：<?php echo ($val['username']); ?></p>
 									<p>等级：暂无数据</p>
 									<p>注册时间：<?php echo (date('Y-m-d H:i:s',$val["createtime"])); ?></p>
-									<?php if($val['superior_id'] != '0'): ?><p>上级：</p><?php endif; ?>
+									<?php if($val['superior_id'] != '0'): ?><p>上级：<?php echo ($val["superior_name"]); ?></p><?php endif; ?>
 								</td>
 								<td>
 									<p>消费：￥<span>0.00</span></p>
@@ -203,7 +203,7 @@
                 <div class="mgt10">
                     <div class="paginate">
 						<?php echo ($page); ?>
-<!--
+						<!--
                         <a href="javascript:;" class="prev disabled"></a>
                         <a class="cur">1</a>
                         <a href="/User/lists/p/2.html">2</a>
@@ -215,7 +215,7 @@
                         <input class="" type="text">
                         <a href="" class="goto">确定</a>
                         <span class="mgr5">页</span>
--->
+						-->
                     </div>
                 </div>
             </div>
