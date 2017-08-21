@@ -1012,7 +1012,6 @@ body {
 
 #qrcode,
 .gotop {
-    display: none;
     position: fixed;
     left: 0
 }

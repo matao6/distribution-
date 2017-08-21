@@ -186,8 +186,8 @@ $(function () {
                     label: '取消'
                 }
             },
-            title: '提示',
-            message: '删除后将不可恢复，确认删除吗？',
+            title: '设为分销商',
+            message: '确定设为分销商？ ',
             callback: function (result) {
                 if (result) {
                     alert('传到后台。。')

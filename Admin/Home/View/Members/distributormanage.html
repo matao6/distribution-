@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/toastr.min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/distributormanage.css">
 </head>
 
@@ -165,7 +166,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <input class="checkbox table-ckbs" data-id="3347583" data-name="chjks" type="checkbox">
+                            <input class="checkbox table-ckbs" type="checkbox">
                         </td>
                         <td>
                             <img src="http://wx.qlogo.cn/mmopen/I0n26ibEtaEAsIF4Fic7oicFsYm8iah3zN3iaknq9FFcmUOpbb4aiczWyNe6Pv4zxCNPkz9uNTaaG5CPwgXnSXZfZRVMA6Hvohc2eh/96"
@@ -196,19 +197,23 @@
                             <a href="/User/agent_detail/id/3347583" target="_blank" class="btn btn-mini btn-success">查看下级</a>
                             <a href="/User/getAgentOrder/id/3347583" target="_blank" class="btn btn-mini btn-success">查看订单</a>
                             <a href="/User/getPie/id/3347583" target="_blank" class="btn btn-mini btn-success">财务报表</a>
-                            <a href="javascript:;" class="btn btn-mini btn-success j-qrcode" title="二维码" data-link="http%3A%2F%2Fm9.huiyuandao.com%2FUser%2Findex%2Fpid%2F3347583%2Fsid%2F8001068.html">二维码</a>
+                            <a href="javascript:;" class="btn btn-mini btn-success qrcode-hook" title="二维码" data-link="http%3A%2F%2Fm9.huiyuandao.com%2FUser%2Findex%2Fpid%2F3347583%2Fsid%2F8001068.html">二维码</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div id="qrcode" class="hide">
+                <img src="http://wx.qlogo.cn/mmopen/I0n26ibEtaEAsIF4Fic7oicFsYm8iah3zN3iaknq9FFcmUOpbb4aiczWyNe6Pv4zxCNPkz9uNTaaG5CPwgXnSXZfZRVMA6Hvohc2eh/96">
+                <a href="javascript:;" class="qrcode-btn j-closeQrcode"><i class="glyphicon glyphicon-remove" style="color: white;"></i></a>
+            </div>
             <div class="tables-btmctrl">
                 <div class="mgb10">
                     <a href="javascript:;" class="btn btn-primary btn_table_selectAll">全选</a>
                     <a href="javascript:;" class="btn btn-primary btn_table_Cancle">取消</a>
-                    <a href="javascript:;" class="btn btn-warning j-setGroup" data-type="1">批量设置分组</a>
-                    <a href="javascript:;" class="btn btn-warning j-setAgentLevel">批量设置等级</a>
-                    <a href="javascript:;" class="btn btn-warning j-setAgentTime">批量设置到期时间</a>
-                    <a href="javascript:;" class="btn btn-warning j-setAgentStatus">批量取消分销资质</a>
+                    <a href="javascript:;" class="btn btn-warning j-setGroup-hook">批量设置分组</a>
+                    <a href="javascript:;" class="btn btn-warning j-setAgentLevel-hook">批量设置等级</a>
+                    <a href="javascript:;" class="btn btn-warning j-setAgentTime-hook">批量设置到期时间</a>
+                    <a href="javascript:;" class="btn btn-warning j-setAgentStatus-hook">批量取消分销资质</a>
                 </div>
             </div>
         </div>
@@ -216,6 +221,7 @@
     <div class="footer"></div>
 
     <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/toastr.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>

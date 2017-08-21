@@ -18,6 +18,9 @@ i.icon_right {
   top: 50%;
   transform: translate(0, -50%);
 }
+#toast-container {
+  top: 45%;
+}
 .body-wrapper {
   background-color: #e7e8eb;
 }

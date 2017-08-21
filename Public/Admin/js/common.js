@@ -82,6 +82,23 @@ function mt_timeFun(firstTime, FTposition, secondTime, STposition){
             $(secondTime).val(diffDate);
         }
     });
+    
+    // 初始哈弹出框
+    toastr.options = {  
+        closeButton: false,  
+        debug: false,  
+        progressBar: false,  
+        positionClass: "toast-top-center",  
+        onclick: null,  
+        showDuration: "300",  
+        hideDuration: "1000",  
+        timeOut: "2000",  
+        extendedTimeOut: "2000",  
+        showEasing: "swing",  
+        hideEasing: "linear",  
+        showMethod: "fadeIn",  
+        hideMethod: "fadeOut"  
+    }; 
 }
 
 $(function () {
