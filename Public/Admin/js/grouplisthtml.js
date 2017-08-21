@@ -1,6 +1,6 @@
 $(function(){
     // 初始化左侧菜单，源码在--common.js
-    choiceNavigation(mt_manage, grouplisthtml_date_id);
+    choiceNavigation(mt_manage, grouplisthtml_data_id);
 
     // 权限组列表删除
     $('.table-hook').on('click', '.del-hook', function () {

@@ -30,7 +30,3 @@ td {
 .info .form-wrapper .row {
   height: 40px;
 }
-.info .form-wrapper .row .col #start_date,
-.info .form-wrapper .row .col #end_date {
-  cursor: not-allowed;
-}

@@ -7,10 +7,15 @@ var mt_vip = 45, mt_manage = 16;
 
 // 1-导航列表active值, 2-导航增加active, 3-管理员列表, 4-管理员增加 --初始active的值--data-id
 var navigalisthtml_data_id = 20, navigaaddhtml_data_id = 18, memberlisthtml_data_id = 38, info_data_id = 47;
-var memberaddhtml_data_id = 25, grouplisthtml_date_id = 50, groupaddhtml_data_id = 52, membersLists_data_id = 46, grouplist = 48;
-var membershiplevel_data_id=58;
+var memberaddhtml_data_id = 25, grouplisthtml_data_id = 50, groupaddhtml_data_id = 52, membersLists_data_id = 46, grouplist = 48;
+var membershiplevel_data_id=58, distributormanage_data_id = 59;
 
-// 选择导航
+/**
+ * 
+ * 选择导航
+ * @param {Number} id 顶部导航id 
+ * @param {Number} leftActive 左侧导航active
+ */
 function choiceNavigation(id, leftActive) {
     $(document).ajaxComplete(function() {
         // 初始化左侧菜单栏数据
@@ -32,6 +37,49 @@ function choiceNavigation(id, leftActive) {
                     $(this).parent().addClass('active');
                 }
             })
+        }
+    });
+}
+/**
+ * 
+ * 选时间的公共方法
+ * @param {String} firstTime 起始时间
+ * @param {String} FTposition 起始时间弹出款位置
+ * @param {String} secondTime 结束时间
+ * @param {String} STposition 结束时间弹出框位置
+ */
+function mt_timeFun(firstTime, FTposition, secondTime, STposition){
+    var date = new Date();
+    // 注册时间配置
+    $(firstTime).datetimepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayBtn: true,
+        endDate: date, // 结束时间--今天
+        minView: 2, // 选完日后，不在出现下级时间选择
+        language: 'zh-CN',
+        forceParse: true, // 强制解析
+        pickerPosition: FTposition // 选择框位置
+    }).on('hide', function () {
+        if ($(firstTime).val() > $(secondTime).val() && $(secondTime).val() != '') {
+            var diffDate = $(secondTime).val().valueOf();
+            $(firstTime).val(diffDate);
+        }
+    });
+    // 注册时间配置
+    $(secondTime).datetimepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayBtn: true,
+        endDate: date, // 结束时间--今天
+        minView: 2, // 选完日后，不在出现下级时间选择
+        language: 'zh-CN',
+        forceParse: true, // 强制解析
+        pickerPosition: STposition // 选择框位置
+    }).on('hide', function () {
+        if ($(secondTime).val() < $(firstTime).val()) {
+            var diffDate = $(firstTime).val().valueOf();
+            $(secondTime).val(diffDate);
         }
     });
 }

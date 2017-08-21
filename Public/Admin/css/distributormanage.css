@@ -1,0 +1,28 @@
+.info .nowHasUser {
+    position: relative;
+    padding: 12px 15px;
+    border: 1px solid #1c89d5;
+    border-radius: 5px;
+    background: #d9edf7;
+}
+
+.info .nowHasUser .amount {
+    font-size: 16px;
+}
+
+.info .nowHasUser .removeParent {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.slect_diy {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+}
+.row {
+    height: 40px;
+}

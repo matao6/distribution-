@@ -60,6 +60,51 @@
             </dl>   -->
         </div>
         <div class="info">
+            <h1 class="content-right-title">会员等级</h1>
+            <form action="" method="post">
+                <div class="mgb10">
+                    <label>升级条件：</label>
+                    <label><input name="is_rank_upgrade_status" type="radio" value="1" checked="checked"> 已付款金额</label>　　
+                    <label><input name="is_rank_upgrade_status" type="radio" value="0"> 交易完成金额</label>
+                    &nbsp;&nbsp;<span><input type="submit" class="btn btn-primary j-exchange" value="保存"></span>
+                </div>
+            </form>
+            <div>
+                <a href="javascript:;" class="btn btn-success addLevel-hook">添加会员等级</a>
+            </div>
+            <table class="wxtables mgt15">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="22%">
+                        <col width="13%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td>等级名称</td>
+                            <td>交易额</td>
+                            <td>或 交易次数</td>
+                            <td>会员折扣</td>
+                            <td>会员数量</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>
+                                <a href="javascript:;" class="btn btn-mini btn-primary edit-hook">编辑</a>
+                                <a href="javascript:;" class="btn btn-mini btn-danger del-hook">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
         </div>
     </div>
     <div class="footer"></div>

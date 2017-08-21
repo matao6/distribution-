@@ -3,7 +3,7 @@ $(function () {
     choiceNavigation(mt_vip, membershiplevel_data_id);
 
     // 删除
-    $('.del-hook').click(function () {
+    $(document).on('click', '.del-hook', function () {
         bootbox.confirm({
             small: 'size',
             title: '删除会员等级',
@@ -36,7 +36,7 @@ $(function () {
                     label: '取消'
                 }
             },
-            message: '<div class="jbox-container" style="height: 520px; overflow: auto;">'+
+            message: '<div class="jbox-container" style="height: 480px; overflow: auto;">'+
                         '<div>'+
                             '<div class="formitems">'+
                                 '<label class="fi-name">等级权重：</label>'+
@@ -125,18 +125,18 @@ $(function () {
     });
 
     // 编辑
-    $('.edit-hook').click(function () {
+    $(document).on('click', '.edit-hook', function () {
         bootbox.confirm({
-            title: '添加会员等级',
+            title: '编辑会员等级',
             buttons: {
-                confirm: {
-                    label: '确定'
-                },
                 cancel: {
                     label: '取消'
+                },
+                confirm: {
+                    label: '确定'
                 }
             },
-            message: '<div class="jbox-container" style="height: 520px; overflow: auto;">'+
+            message: '<div class="jbox-container" style="height: 480px; overflow: auto;">'+
                         '<div>'+
                             '<div class="formitems">'+
                                 '<label class="fi-name">等级权重：</label>'+
@@ -224,5 +224,13 @@ $(function () {
         })
     });
 
+    // 选择商品中弹框中--关闭按钮
+    $('.B_del-hook').click(function(){
+        $('.chooseGoods').addClass('hide');
+    })
 
+    // 指定商品点击--显示选择商品弹框
+    $(document).on('click', '.addGoods-hook', function(){
+        $('.chooseGoods').removeClass('hide');
+    })
 })

@@ -1418,7 +1418,8 @@ body {
     border: 1px dashed #999;
     color: #999;
     font: 700 46px/60px arial;
-    cursor: pointer
+    cursor: pointer;
+    box-sizing: content-box;
 }
 
 .imgpicker-actionPanel {
@@ -3090,7 +3091,6 @@ input.fi-btn-upload {
     background: #00B200;
     color: #fff;
     font-size: 12px;
-    padding: 0 4px
 }
 
 .table-searchbox-v2 {
