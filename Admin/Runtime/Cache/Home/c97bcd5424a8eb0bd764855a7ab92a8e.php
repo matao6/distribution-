@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>权限组编辑</title>
-    <link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
-    <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
-	<link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap-switch.min.css">    
-    <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
-    <link rel="stylesheet" href="__PUBLIC__/Admin/css/groupaddhtml.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Public/Admin/css/component-min.css">
+    <link rel="stylesheet" href="/Public/Admin/css/reset.css">
+	<link rel="stylesheet" href="/Public/Admin/css/bootstrap-switch.min.css">    
+    <link rel="stylesheet" href="/Public/Admin/css/common.css">
+    <link rel="stylesheet" href="/Public/Admin/css/groupaddhtml.css">
 </head>
 
 <body class="body-wrapper">
@@ -19,7 +19,7 @@
         <div class="h-left">
             <div class="logo">
                 <a href="#">
-                    <img src="__PUBLIC__/Admin/image/logo.png" alt="侨品汇">
+                    <img src="/Public/Admin/image/logo.png" alt="侨品汇">
                 </a>
             </div>
             <div class="text">
@@ -71,7 +71,7 @@
                         <span class="red">*</span>权限组名称：
                     </label>
                     <div class="form-controls">
-                        <input type="text" class="input" name="name" value="">
+                        <input type="text" class="input" name="name" value="<?php echo ($info["name"]); ?>">
                     </div>
                 </div>
                 <div class="formitems">
@@ -79,36 +79,29 @@
                             <span class="red">*</span>状态：
                         </label>
                     <div class="form-controls" style="padding-top: 4px;">
-                        <input type="checkbox" name="state" id="state-hook" value="1" checked />
+                        <?php if($info["state"] == 1 ): ?><input type="checkbox" name="state" id="state-hook" value="1" checked />
+                            <?php else: ?> <input type="checkbox" name="state" id="state-hook" value="0"/><?php endif; ?>
                     </div>
                 </div>
                 <div class="add_role_box">
                     <div class="add_role_list">
                         <div class="">
-                            <!-- <input type="checkbox" class="head" id="navi-hook"><label for="navi-hook">导航</label> -->
+                             <input type="checkbox" class="head" id="navi-hook"><label for="navi-hook">以拥有权限</label>
                         </div>
                         <ul>
-                            <foreach name="naviga" item="v">
-                                <foreach name="v['list']" item="vo">
-                                    <foreach name="vo['list']" item="val">
-                                        <li class="menu_li">
-                                            <input type="checkbox" class="" id="{$val.id}" name="pid"><label for="{$val.id}">{$val.name}</label>
-                                        </li>
-                                    </foreach>
-                                </foreach>
-                            </foreach>
+                            <?php if(is_array($Y)): foreach($Y as $key=>$val): ?><li class="menu_li">
+                                    <input type="checkbox" class="" id="<?php echo ($val["id"]); ?>" name="pid"><label for="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></label>
+                                </li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                     <div class="add_role_list">
                         <div class="">
-                            <!-- <input type="checkbox" class="head" id="link-hook"><label for="link-hook">连接</label> -->
+                             <input type="checkbox" class="head" id="link-hook"><label for="link-hook">未拥有权限</label>
                         </div>
                         <ul>
-                            <foreach name="nonaviga" item="val">
-                                <li class="menu_li">
-                                    <input type="checkbox" class="" id="{$val.id}" name="pid"><label for="{$val.id}">{$val.name}</label>
-                                </li>
-                            </foreach>
+                            <?php if(is_array($N)): foreach($N as $key=>$val): ?><li class="menu_li">
+                                    <input type="checkbox" class="" id="<?php echo ($val["id"]); ?>" name="pid"><label for="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></label>
+                                </li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -122,14 +115,14 @@
     </div>
     <div class="footer"></div>
 
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap-switch.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/messages_zh.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/bootbox.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/common.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/groupaddhtml.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/Public/Admin/js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/messages_zh.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/common.js"></script>
+    <script type="text/javascript" src="/Public/Admin/js/groupaddhtml.js"></script>
 </body>
 
 </html>

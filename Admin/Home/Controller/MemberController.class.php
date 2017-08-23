@@ -168,9 +168,8 @@ class MemberController extends AdminController {
         $Id = $GroupInfo['id'];
         unset($GroupInfo['id']);
         $GroupList= D('Member') ->GroupSave($GroupInfo, $Id);
-        if($GroupList){
-            $Json = json_encode(array('code'=>'1', 'message'=>'修改成功'));
-        }else{
+        $Json = json_encode(array('code'=>'1', 'message'=>'修改成功'));
+        if($GroupList === 'false'){
             $Json = json_encode(array('code'=>'0', 'message'=>'修改失败'));
         }
         echo $Json;
@@ -218,6 +217,7 @@ class MemberController extends AdminController {
         $Id = I('id');
         $NavigaList = D('Member') ->NavigaList();
         $PowerList = D('Member') ->PowerList($Id);
+        $GroupInfo = D('Member') ->GroupInfo($Id);
         $Yarray = array();//拥有权限
         $Narray = array();//未拥有权限
         foreach($NavigaList as $k => $v){
@@ -227,7 +227,10 @@ class MemberController extends AdminController {
                 $Narray[] = $v;
             }
         }
-        echo json_encode(array('code'=>'1', 'message'=>'成功', 'Y'=>$Yarray, 'N'=>$Narray));
+        $this ->assign('N', $Narray);
+        $this ->assign('Y', $Yarray);
+        $this ->assign('info', $GroupInfo);
+        $this ->display();
     }
 
     /**
@@ -235,10 +238,18 @@ class MemberController extends AdminController {
      * 2017-07-24 Angus
      * */
     public function PowerAdd(){
-        $Data = I('post.');
-        $Data['add_time'] = time();
-        $Data['creator'] = $_SESSION['User']['uid'];
+        $POST = I('post.');
+        $Data = explode(',', $POST['n_id']);
+        foreach($Data as $k => $v){
+            $Array['add_time'] = time();
+            $Array['group_id'] = $POST['group_id'];
+            $Array['creator'] = $_SESSION['User']['uid'];
+            $Array['n_id'] = $v;
+            $Data[$k] = $Array;
+        }
+        print_r($POST['group_id']);
         $PowerAdd = D('Member') ->PowerAdd($Data);
+        print_r($Data);die;
         if($PowerAdd){
             $Json = json_encode(array('code'=>'1', 'message'=>'添加成功'));
         }else{

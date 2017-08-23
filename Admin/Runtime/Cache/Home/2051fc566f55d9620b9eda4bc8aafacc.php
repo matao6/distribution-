@@ -119,7 +119,7 @@
                             </div>
                             <div class="col col-2">
                                 <span class="tbs-txt">注册时间：</span>
-                                <input name="starttime" placeholder="开始时间" size="16" id="start_date" class="input mini" type="text" autocomplete="off" value="<?php echo ($starttime); ?>" readonly>
+                                <input name="starttime" placeholder="开始时间" size="16" id="start_date" class="input mini" type="text" autocomplete="off" value="<?php echo ($starttime); ?>">
                                 <input name="endtime" placeholder="结束时间" id="end_date" class="input mini" type="text" autocomplete="off" value="<?php echo ($endtime); ?>">
                             </div>
                         </div>
@@ -180,7 +180,7 @@
 									<a href="/admin.php/Members/info/id/<?php echo ($val['id']); ?>" class="btn btn-mini btn-primary" target="blank">详情</a>
 									<a href="javascript:;" class="btn btn-mini btn-primary listsEdit-hook" dataid="<?php echo ($val['id']); ?>">编辑</a>
 									<a href="javascript:;" class="btn btn-mini btn-danger listsDelete-hook" dataid="<?php echo ($val['id']); ?>">删除</a>
-									<a href="javascript:;" class="btn btn-mini btn-primary setFenBusiness-hook">设置是分销商</a>
+									<a href="javascript:;" class="btn btn-mini btn-primary setFenBusiness-hook">设为分销商</a>
 									<a href="javascript:;" class="btn btn-mini btn-primary setGrade-hook">设等级</a>
 									<a href="javascript:;" class="btn btn-mini btn-warning setIntegral-hook" dataid="<?php echo ($val['id']); ?>">调整积分</a>
 									<a href="/admin.php/Msuperior/lists/id/<?php echo ($val['id']); ?>" class="btn btn-mini btn-warning">设置上级</a>

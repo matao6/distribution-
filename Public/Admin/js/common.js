@@ -3,12 +3,12 @@ localStorage.setItem('mt_network', 'http://fenxiao.qphvip.com/admin.php/');
 var mt_network = localStorage.getItem('mt_network');
 
 // {number} 会员id, 管理id, --后续还有各种--id
-var mt_vip = 45, mt_manage = 16;
+var mt_vip = 45, mt_manage = 16, mt_goods = 60;
 
 // 1-导航列表active值, 2-导航增加active, 3-管理员列表, 4-管理员增加 --初始active的值--data-id
 var navigalisthtml_data_id = 20, navigaaddhtml_data_id = 18, memberlisthtml_data_id = 38, info_data_id = 47;
 var memberaddhtml_data_id = 25, grouplisthtml_data_id = 50, groupaddhtml_data_id = 52, membersLists_data_id = 46, grouplist = 48;
-var membershiplevel_data_id=58, distributormanage_data_id = 59;
+var membershiplevel_data_id=58, distributormanage_data_id = 59, attributeadd_data_id = 62, attributelist_data_id = 63;
 
 /**
  * 

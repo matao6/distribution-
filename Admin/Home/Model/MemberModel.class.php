@@ -67,7 +67,7 @@ class MemberModel extends Model{
      * 2017-07-21 Angus
      * */
     public function GroupList($State){
-        $GroupList = M('Group') ->field('qph_group.id, qph_group.name, qph_group.add_time, qph_admin.name as Uname') ->join('qph_admin on qph_group.creator = qph_admin.uid') ->select();
+        $GroupList = M('Group') ->field('qph_group.id, qph_group.name, qph_group.add_time, qph_admin.name as Uname') ->join('qph_admin on qph_group.creator = qph_admin.uid') ->where(array('qph_group.state'=>'1')) ->select();
         return $GroupList;
     }
 
@@ -78,6 +78,15 @@ class MemberModel extends Model{
     public function GroupListC(){
         $GroupList = M('Group') ->field('id, name') ->where(array('state'=>1)) ->select();
         return $GroupList;
+    }
+
+    /**
+     * 权限组详细信息
+     * 2017-08-07 Angus
+     * */
+    public function GroupInfo($Id){
+        $GroupInfo = M('Group') ->where(array('id'=>$Id)) ->find();
+        return $GroupInfo;
     }
 
     /**
@@ -130,7 +139,7 @@ class MemberModel extends Model{
      * 2017-07-24 Angus
      * */
     public function PowerAdd($Data){
-        $PowerAdd = M('Power') ->add($Data);
+        $PowerAdd = M('Power') ->addAll($Data);
         return $PowerAdd;
     }
 
@@ -156,7 +165,9 @@ class MemberModel extends Model{
      * 2017-07-24 Angus
      * */
     public function PowerDel($Gid, $Nid){
-        $PowerAdd = M('Power') ->where(array('group_id'=>$Gid, 'n_id'=>$Nid)) ->delete();
+        $Where['group_id'] = $Gid;
+        $Where['n_id'] = array('in', $Nid);
+        $PowerAdd = M('Power') ->where($Where) ->delete();
         return $PowerAdd;
     }
 

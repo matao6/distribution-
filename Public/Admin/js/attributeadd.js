@@ -1,6 +1,6 @@
-$(function () {
+$(function(){
     // 初始化左侧菜单，源码在--common.js
-    choiceNavigation(mt_manage, navigaaddhtml_data_id);
+    choiceNavigation(mt_goods, attributeadd_data_id);
 
     // 获取到返回的数据
     function showData(data) {
@@ -18,7 +18,7 @@ $(function () {
             var state = $('#state-hook').val();
             var options = {
                 type: 'POST',
-                url: mt_network + 'Member/NavigaAdd',
+                url: mt_network + 'Goods/AttrValueAddApi',
                 data: {
                     state: state
                 },
@@ -28,30 +28,26 @@ $(function () {
             $(form).ajaxSubmit(options);
         },
         rules: {
+            fid: {
+                required: true
+            },
             name: 'required',
-            // fid: {
-            //     required: true
-            // },
             // url: {
             //     required: true
             // },
             sort: {
                 required: true
-            },
-            type: 'required',
-            store_id: 'required'
+            }
         },
         messages: {
-            name: '请输入导航名称',
-            // fid: '请选择父级',
+            fid: '请选择分类',
+            name: '请选择名称',
             // url: {
             //     required: '请输入URL'
             // },
             sort: {
-                required: '请输入权重'
-            },
-            group_id: '请选择权限组id',
-            store_id: '请选择门店id'
+                required: '请输入排序'
+            }
         }
     });
 
@@ -60,14 +56,31 @@ $(function () {
         size: 'mini',
         onColor: 'success',
         offColor: 'danger',
-        onText: '正常',
-        offText: '禁用',
+        onText: '是',
+        offText: '否',
         onSwitchChange: function (event, state) {
             if (state == true) {
                 $(this).val("1");
             } else {
                 $(this).val("0");
             }
+        }
+    });
+
+    // 点击规格是弹出是否可变规格属性
+    $('.spec-hook').click(function(){
+        $('.isChange-hook').slideDown();
+    });
+    $('.attr-hook').click(function(){
+        $('.isChange-hook').slideUp();
+    })
+    
+    // 点击添加值的按钮
+    $('.addValue-hook').click(function(){
+        var addValue = $(this).prev().val();
+        var ParentNode = $(this).parent();
+        if(addValue != '') {
+            var 
         }
     })
 })

@@ -63,7 +63,7 @@ $(function(){
     $('.edit-hook').click(function(){
         var id = $(this).attr('data-id');
 
-        location.href = mt_network + 'http://fenxiao.qphvip.com/admin.php/Member/PowerList/id/' + id;
+        location.href = mt_network + 'Member/PowerList/id/' + id;
     })
 
 })
