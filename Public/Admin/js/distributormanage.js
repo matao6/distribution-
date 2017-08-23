@@ -2,6 +2,22 @@ $(function () {
     // 初始化左侧菜单，源码在--common.js
     choiceNavigation(mt_vip, distributormanage_data_id);
 
+    // 初始化弹出框
+    toastr.options = {
+        closeButton: false,  
+        debug: false,  
+        progressBar: false,  
+        positionClass: "toast-top-center",  
+        onclick: null,  
+        showDuration: "500",  
+        hideDuration: "500",  
+        timeOut: "1000",  
+        extendedTimeOut: "1000",  
+        showEasing: "swing",  
+        hideEasing: "linear",  
+        showMethod: "fadeIn",  
+        hideMethod: "fadeOut"  
+    };  
     // fadeOut父节点
     function removeParent() {
         $(this).parent().fadeOut();
@@ -441,7 +457,6 @@ $(function () {
             }
         });
     });
-
     // 二维码
     $('.qrcode-hook').click(function(){
         $('#qrcode').removeClass('hide');

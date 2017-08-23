@@ -1,0 +1,12 @@
+.addNode{
+    display: inline-block;
+}
+.addNode .nodeValue{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.addNode .nodeDel{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 0 6px;
+}

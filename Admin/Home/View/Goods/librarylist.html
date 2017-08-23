@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>属性规格列表</title>
+    <title>展馆列表</title>
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/toastr.min.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/groupLists.css">
 </head>
 
@@ -63,15 +64,12 @@
             </dl>   -->
         </div>
         <div class="info">
-            <h1 class="content-right-title">规格属性列表</h1>
+            <h1 class="content-right-title">展馆列表</h1>
             <div class="clearfix" style="height: 50px;">
-                <a href="AttributeAdd" class="btn btn-success fl newGroup-hook" style="margin-top: 10px;">添加规格属性</a>
+                <a href="" class="btn btn-success fl newGroup-hook" style="margin-top: 10px;">添加展馆</a>
 				<form action="/admin.php/Mgroup/lists" method="get" id="form1">
 					<div class="tables-searchbox fr">
-                        <select class="select">
-                            <option value="">test</option>
-                        </select>
-						<input placeholder="类目名称" class="input" name="title" value="{$title}" type="text">
+						<input placeholder="搜索展馆" class="input" name="title" value="{$title}" type="text">
 						<button class="btn btn-primary" id="sub"><i class="glyphicon glyphicon-search mgr5"></i>查询</button>
 					</div>
 				</form>
@@ -79,8 +77,10 @@
             <table class="wxtables mgt15">
                 <colgroup>
                     <col width="2%">
-                    <col width="19%">
-                    <col width="19%">
+                    <col width="9%">
+                    <col width="10%">
+                    <col width="9%">
+                    <col width="10%">
                     <col width="17%">
                     <col width="17%">
                     <col width="17%">
@@ -88,9 +88,11 @@
                 <thead>
                     <tr>
                         <td><i class="glyphicon glyphicon-check"></i></td>
-                        <td>分组名称</td>
-                        <td>属性名称</td>
-                        <td>属性值</td>
+                        <td>ID号</td>
+                        <td>展馆名称</td>
+                        <td>LOGO</td>
+                        <td>展示图</td>
+                        <td>描述</td>
                         <td>状态</td>
                         <td>操作</td>
                     </tr>
@@ -100,7 +102,9 @@
 						<tr>
 							<td>
 								<input class="checkbox table-ckbs checkbox-hook" type="checkbox" name="checkbox" value="{$val['id']}">
-							</td>
+                            </td>
+                            <td></td>
+                            <td></td>
 							<td>{$val['title']}</td>
 							<td>{$val['cn']}</td>
                             <td></td>
@@ -111,6 +115,27 @@
 							</td>
 						</tr>
 					</foreach>
+                    <tr>
+                        <td>
+                            <input class="checkbox table-ckbs checkbox-hook" type="checkbox" name="checkbox" value="{$val['id']}">
+                        </td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>
+                            <img src="http://wx.qlogo.cn/mmopen/I0n26ibEtaEAsIF4Fic7oicFsYm8iah3zN3iaknq9FFcmUOpbb4aiczWyNe6Pv4zxCNPkz9uNTaaG5CPwgXnSXZfZRVMA6Hvohc2eh/96"
+                            alt="" width="60" height="60" style="border-radius: 50%;">
+                        </td>
+                        <td>
+                            <img src="http://wx.qlogo.cn/mmopen/I0n26ibEtaEAsIF4Fic7oicFsYm8iah3zN3iaknq9FFcmUOpbb4aiczWyNe6Pv4zxCNPkz9uNTaaG5CPwgXnSXZfZRVMA6Hvohc2eh/96"
+                            alt="" width="60" height="60" style="border: 1px solid #ccc;">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="javascript:;" class="btn btn-mini btn-primary edit-hook" title="编辑" data-id="{$val['id']}">编辑</a>
+                            <a href="javascript:;" class="btn btn-mini btn-danger del-hook" title="删除" data-id="{$val['id']}">删除</a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="tables-btmctrl clearfix">
@@ -143,10 +168,11 @@
     <div class="footer"></div>
 
     <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/toastr.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/bootbox.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Admin/js/common.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Admin/js/attributelist.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/librarylist.js"></script>
 </body>
 
 </html>

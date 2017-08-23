@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/component-min.css">
 	<link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css">
     <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/membershiplevel.css">
 </head>
 <body class="body-wrapper">
     <div class="header clearfix">
@@ -73,38 +74,134 @@
                 <a href="javascript:;" class="btn btn-success addLevel-hook">添加会员等级</a>
             </div>
             <table class="wxtables mgt15">
-                    <colgroup>
-                        <col width="20%">
-                        <col width="15%">
-                        <col width="15%">
-                        <col width="15%">
-                        <col width="22%">
-                        <col width="13%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <td>等级名称</td>
-                            <td>交易额</td>
-                            <td>或 交易次数</td>
-                            <td>会员折扣</td>
-                            <td>会员数量</td>
-                            <td>操作</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>
-                                <a href="javascript:;" class="btn btn-mini btn-primary edit-hook">编辑</a>
-                                <a href="javascript:;" class="btn btn-mini btn-danger del-hook">删除</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <colgroup>
+                    <col width="20%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="22%">
+                    <col width="13%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td>等级名称</td>
+                        <td>交易额</td>
+                        <td>或 交易次数</td>
+                        <td>会员折扣</td>
+                        <td>会员数量</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>
+                            <a href="javascript:;" class="btn btn-mini btn-primary edit-hook">编辑</a>
+                            <a href="javascript:;" class="btn btn-mini btn-danger del-hook">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="chooseGoods col-lg-8 col-md-9 col-sm-9 hide">
+            <div class="mtBox_title">
+                <span class="B_title">选择商品</span>
+                <a href="javascript:;" class="glyphicon glyphicon-remove B_del B_del-hook"></a>
+            </div>
+            <div class="mtBox_content">
+                <div class="jbox-container" style="max-height: 500px;"><div>
+                        <input name="title" placeholder="请输入商品关键词" class="input xlarge" value="" type="text">
+                            <select name="status" class="select">  
+                            <option value="-1">在售中</option>  
+                            <option value="3">仓库中</option>  
+                        </select>
+                        <select name="class_id" class="select small newselect">
+                            <option value="-1" selected="">所有分类</option>
+                            <option value="0">未分类</option>
+                        </select>
+                        <a href="javascript:;" class="btn btn-primary j-search"><i class="glyphicon glyphicon-search white mgr5"></i>查询</a>
+                    </div>
+                
+                    <table class="wxtables mgt10 table-selectGoods">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="28%">
+                            <col width="5%">
+                            <col width="28%">
+                            <col width="5%">
+                            <col width="28%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>商品</td>
+                                <td></td>
+                                <td>商品</td>
+                                <td></td>
+                                <td>商品</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txtCenter">
+                                    <a href="javascript:;" class="icon-select j-select" data-index="0"></a>
+                                    <input class="j-chkbox" data-index="0" data-itemid="1248487" style="display:none;" type="checkbox">
+                                </td>
+                                <td style="border-right: 1px solid #e7e7eb;">
+                                    <a href="http://m9.huiyuandao.com/Item/detail/id/1248487/sid/8001068.html" class="block" target="_blank" title="DW女表36mm表盘金色边皮带超薄女士石英手表 韩版简约">
+                                        <div class="table-item-img">
+                                            <img src="http://image.supvip.cn/df/53/8001068/2017-08/59969ea994040.jpg@!w640" alt="DW女表36mm表盘金色边皮带超薄女士石英手表 韩版简约">
+                                        </div>
+                                        <div class="table-item-info">
+                                            <p>DW女表36mm表盘金色边皮带超薄女士石英手表 韩版简约</p>
+                                            <span class="price">现价 ¥1380.00</span>
+                                            <div class="label">已选择该商品</div>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="txtCenter">
+                                        <a href="javascript:;" class="icon-select j-select" data-index="1"></a>
+                                        <input class="j-chkbox" data-index="1" data-itemid="1248483" style="display:none;" type="checkbox">
+                                </td>
+                                <td style="border-right: 1px solid #e7e7eb;">
+                                    <a href="http://m9.huiyuandao.com/Item/detail/id/1248483/sid/8001068.html" class="block" target="_blank" title="DW女表36mm表盘金色边尼龙带超薄女士石英表">
+                                        <div class="table-item-img">
+                                            <img src="http://image.supvip.cn/df/53/8001068/2017-08/59969d7376aac.jpg@!w640" alt="DW女表36mm表盘金色边尼龙带超薄女士石英表">
+                                        </div>
+                                        <div class="table-item-info">
+                                            <p>DW女表36mm表盘金色边尼龙带超薄女士石英表</p>
+                                            <span class="price">现价 ¥1250.00</span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="txtCenter">
+                                        <a href="javascript:;" class="icon-select j-select" data-index="2"></a>
+                                        <input class="j-chkbox" data-index="2" data-itemid="1247644" style="display:none;" type="checkbox">
+                                </td>
+                                <td style="border-right: 1px solid #e7e7eb;">
+                                    <a href="http://m9.huiyuandao.com/Item/detail/id/1247644/sid/8001068.html" class="block" target="_blank" title="DW女表36mm黑表盘银色边皮带超薄女士石英手表">
+                                        <div class="table-item-img">
+                                            <img src="http://image.supvip.cn/df/53/8001068/2017-08/5996996513e56.jpg@!w640" alt="DW女表36mm黑表盘银色边皮带超薄女士石英手表">
+                                        </div>
+                                        <div class="table-item-info">
+                                            <p>DW女表36mm黑表盘银色边皮带超薄女士石英手表</p>
+                                            <span class="price">现价 ¥1380.00</span>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <div class="mgt15 clearfix">
+                        <div class="fr paginate"><a href="javascript:;" class="prev disabled">上一页</a><a class="cur">1</a><a href="/Design/getItem/v/6/p/2.html">2</a><a href="/Design/getItem/v/6/p/3.html">3</a><a href="/Design/getItem/v/6/p/4.html">4</a><a href="/Design/getItem/v/6/p/5.html">5</a><span class="dotted">...</span><a href="/Design/getItem/v/6/p/2.html" class="next">下一页</a></div>
+                    </div>  
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer"></div>

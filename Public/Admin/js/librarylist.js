@@ -1,7 +1,7 @@
 $(function(){
     // 初始化左侧菜单，源码在--common.js
-    choiceNavigation(mt_goods, attributelist_data_id);
-
+    choiceNavigation(mt_goods, libraralist_data_id);
+    
     // 初始化弹出框
     toastr.options = {
         closeButton: false,  
@@ -34,25 +34,25 @@ $(function(){
             toastr.warning('请选择要删除的数据');
             return false;
         } else {
-			if (confirm("确认要删除？")) {
-				var id = new Array();
-				$('.checkbox-hook:checkbox:checked').each(function (){
-						id.push($(this).val());
-				});
-				var str_id = id.join(',');
-				$.ajax({
-					 url: mt_network + 'Mgroup/batchDel',
-					 type: 'POST',
-					 async: false,
-					 data: { id: str_id},
-					 success: function (datas) {
-							datas = JSON.parse(datas);
-							alert(datas.msg);
-							location.reload();
-					 }
-				 });
+            if (confirm("确认要删除？")) {
+                var id = new Array();
+                $('.checkbox-hook:checkbox:checked').each(function (){
+                        id.push($(this).val());
+                });
+                var str_id = id.join(',');
+                $.ajax({
+                        url: mt_network + 'Mgroup/batchDel',
+                        type: 'POST',
+                        async: false,
+                        data: { id: str_id},
+                        success: function (datas) {
+                            datas = JSON.parse(datas);
+                            alert(datas.msg);
+                            location.reload();
+                        }
+                    });
 
-			}
+            }
         }
     })
 })

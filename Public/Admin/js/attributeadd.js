@@ -28,23 +28,17 @@ $(function(){
             $(form).ajaxSubmit(options);
         },
         rules: {
-            fid: {
-                required: true
-            },
-            name: 'required',
-            // url: {
+            // fid: {
             //     required: true
             // },
-            sort: {
-                required: true
-            }
+            // name: 'required',
+            // sort: {
+            //     required: true
+            // }
         },
         messages: {
             fid: '请选择分类',
             name: '请选择名称',
-            // url: {
-            //     required: '请输入URL'
-            // },
             sort: {
                 required: '请输入排序'
             }
@@ -77,10 +71,21 @@ $(function(){
     
     // 点击添加值的按钮
     $('.addValue-hook').click(function(){
-        var addValue = $(this).prev().val();
+        var addValueNode = $(this).prev();
         var ParentNode = $(this).parent();
-        if(addValue != '') {
-            var 
+        if(addValueNode.val() != '') {
+            var addStr = '<span class="addNode mgt10 mgr5">'+
+                            '<input type="button" class="btn btn-warning nodeValue" name="value[]" value="'+addValueNode.val()+'"><a href="javascript:;" class="btn btn-danger nodeDel nodeDel-hook"><i class="glyphicon glyphicon-remove"></i></a>'+
+                        '</span>';
+            ParentNode.append($(addStr));
+            addValueNode.val('');
+        }else{
+            toastr.warning('请输入值!')
         }
+    });
+
+    // 添加值后面的删除按钮
+    $('.parent-hook').on('click', '.nodeDel-hook', function(){
+        $(this).parent().remove();
     })
 })

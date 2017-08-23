@@ -1,6 +1,6 @@
 $(function(){
     // 初始化左侧菜单，源码在--common.js
-    choiceNavigation(mt_goods, attributelist_data_id);
+    choiceNavigation(mt_goods, customclass_data_id);
 
     // 初始化弹出框
     toastr.options = {
@@ -54,5 +54,20 @@ $(function(){
 
 			}
         }
+    });
+
+    // 添加类目
+    $('.newGroup-hook').click(function(){
+
+    })
+
+    // 选择商品中弹框中--关闭按钮
+    $('.B_del-hook').click(function(){
+        $('.chooseGoods').addClass('hide');
+    })
+
+    // 指定商品点击--显示选择商品弹框
+    $(document).on('click', '.addGoods-hook', function(){
+        $('.chooseGoods').removeClass('hide');
     })
 })

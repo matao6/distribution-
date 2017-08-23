@@ -9,7 +9,7 @@ var mt_vip = 45, mt_manage = 16, mt_goods = 60;
 var navigalisthtml_data_id = 20, navigaaddhtml_data_id = 18, memberlisthtml_data_id = 38, info_data_id = 47;
 var memberaddhtml_data_id = 25, grouplisthtml_data_id = 50, groupaddhtml_data_id = 52, membersLists_data_id = 46, grouplist = 48;
 var membershiplevel_data_id=58, distributormanage_data_id = 59, attributeadd_data_id = 62, attributelist_data_id = 63;
-
+var libraralist_data_id = 65, customclass_data_id = 68;
 /**
  * 
  * 选择导航
@@ -83,22 +83,6 @@ function mt_timeFun(firstTime, FTposition, secondTime, STposition){
         }
     });
     
-    // 初始哈弹出框
-    toastr.options = {  
-        closeButton: false,  
-        debug: false,  
-        progressBar: false,  
-        positionClass: "toast-top-center",  
-        onclick: null,  
-        showDuration: "300",  
-        hideDuration: "1000",  
-        timeOut: "2000",  
-        extendedTimeOut: "2000",  
-        showEasing: "swing",  
-        hideEasing: "linear",  
-        showMethod: "fadeIn",  
-        hideMethod: "fadeOut"  
-    }; 
 }
 
 $(function () {
@@ -141,7 +125,7 @@ $(function () {
 
             }
         });
-
+        
     };
 
     init();
